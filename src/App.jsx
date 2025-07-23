@@ -9,6 +9,7 @@ import NavBar from './components/NavBar'
 import { ImOpera } from 'react-icons/im'
 import Footer from './components/Footer'
 import HomePage from './components/Homepage'
+import { Outlet } from 'react-router-dom'
 
 
 function App() {
@@ -17,7 +18,7 @@ function App() {
   return (
     <>
     <NavBar/>
-    <HomePage/>
+    <Outlet/>
    
      <Footer/>
     

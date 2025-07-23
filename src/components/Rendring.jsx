@@ -1,3 +1,34 @@
+
+import { useSearchParams } from "react-router-dom";
+import useCards from "../Hooks.jsx/UseCards"; 
+
+function Rendring(){
+
+    const cards=useCards();
+    if(!cards){
+        return <div>Loading...</div>
+    }
+
+      const [searchParams] = useSearchParams();
+        const categoryId = searchParams.get("categoryId");
+    return(
+        <div>
+            <h1></h1>
+
+        </div>
+    )
+}
+export default Rendring;
+
+
+
+
+
+
+
+
+
+
 // import UseLowerBody from "../Hooks.jsx/UseLowerBody";
 // function LowerBody(){
 //     const [data,More,Krakan]=UseLowerBody();

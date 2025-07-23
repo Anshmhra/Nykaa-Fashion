@@ -1,4 +1,5 @@
 import { useState,useEffect,useRef } from "react";
+import { Link } from "react-router-dom";
 function HomePage(){
      
       const containerRef = useRef(null);
@@ -25,7 +26,7 @@ function HomePage(){
         <div>
             <div>
                 <img src="https://images-static.nykaa.com/uploads/e8e8c9be-714d-4464-83ca-3c40be53fe41.jpg?tr=w-1200,cm-pad_resize"
-                className="w-full"
+                className="w-full hover:cursor-pointer"
                 />
                 <div className="ml-12 mt-4">
                 <p className="text-[18px] font-semibold text-gray-500">Our Stores</p>
@@ -34,55 +35,55 @@ function HomePage(){
                 <div className="overflow-x-auto scrollbar-hide mr-12 whitespace-nowrap">
                 <div className="flex gap-5 ml-12 mt-6 ">
                     <img src="https://images-static.nykaa.com/uploads/8f13793a-0156-49af-b20c-2323ec6cde3f.jpg?tr=w-120,cm-pad_resize"
-                    className="w-35 h-35"
+                    className="w-35 h-35 hover:cursor-pointer"
                     />
                     
                      <img src="https://images-static.nykaa.com/uploads/c1f68994-bc6d-4fb0-9cac-d0ce47d67838.jpg?tr=w-120,cm-pad_resize"
-                     className="w-35 h-35"
+                     className="w-35 h-35 hover:cursor-pointer"
                     />
                      <img src="https://images-static.nykaa.com/uploads/49e6ae70-6e96-44d6-8d56-a5359731b8ec.jpg?tr=w-120,cm-pad_resize"
-                     className="w-35 h-35"
+                     className="w-35 h-35 hover:cursor-pointer"
                     />
                      <img src="https://images-static.nykaa.com/uploads/a66486e0-8eb4-4ef1-a6be-4a135f16432a.jpg?tr=w-120,cm-pad_resize"
-                     className="w-35 h-35"
+                     className="w-35 h-35 hover:cursor-pointer"
                     />
                      <img src="https://images-static.nykaa.com/uploads/585628e7-8d3a-45b1-aedc-195daff883ff.jpg?tr=w-120,cm-pad_resize"
-                     className="w-35 h-35"
+                     className="w-35 h-35 hover:cursor-pointer"
                     />
                      <img src="https://images-static.nykaa.com/uploads/d92a7ba6-ed6b-4d4e-a3ed-2524525ee042.jpg?tr=w-120,cm-pad_resize"
                     
-                     className="w-35 h-35"
+                     className="w-35 h-35 hover:cursor-pointer"
                      />
                      <img src="https://images-static.nykaa.com/uploads/3918fadc-f7d4-4c90-b698-05a083736705.jpg?tr=w-120,cm-pad_resize"
-                     className="w-35 h-35"
+                     className="w-35 h-35 hover:cursor-pointer"
                     />
                      <img src="https://images-static.nykaa.com/uploads/d2145972-3bfb-4f68-aff1-2b6bb376b59b.jpg?tr=w-120,cm-pad_resize"
-                     className="w-35 h-35"
+                     className="w-35 h-35 hover:cursor-pointer"
                     />
                      <img src="https://images-static.nykaa.com/uploads/f6a1b761-90bb-483c-ae5d-e17184459fd2.jpg?tr=w-120,cm-pad_resize"
-                     className="w-35 h-35"
+                     className="w-35 h-35 hover:cursor-pointer"
                     />
                      
-
+ 
                     
                 </div>
                 <div className="flex gap-7 ml-23">
-                <p className="font-semibold">Women</p>
-                 <p className="ml-22 font-semibold ">Men</p>
-                  <p className="ml-24 font-semibold ">Kids</p>
-                   <p className="ml-24 font-semibold ">Home</p>
-                    <p className="ml-18 font-semibold w-"  >Luxs Edit</p> 
-                    <p className="ml-15 font-semibold ">Home Gems</p>
-                    <p className="ml-12 font-semibold ">Global Store</p>
-                    <p className="ml-12 font-semibold ">Revolve</p>
-                    <p className="ml-12 w-50 font-semibold ">House of Nykaa</p>
+                <p className="font-semibold hover:cursor-pointer">Women</p>
+                 <p className="ml-22 font-semibold  hover:cursor-pointer">Men</p>
+                  <p className="ml-24 font-semibold  hover:cursor-pointer">Kids</p>
+                   <p className="ml-24 font-semibold  hover:cursor-pointer">Home</p>
+                    <p className="ml-18 font-semibold w- hover:cursor-pointer"  >Luxs Edit</p> 
+                    <p className="ml-15 font-semibold  hover:cursor-pointer">Home Gems</p>
+                    <p className="ml-12 font-semibold  hover:cursor-pointer">Global Store</p>
+                    <p className="ml-12 font-semibold  hover:cursor-pointer">Revolve</p>
+                    <p className="ml-12 w-50 font-semibold hover:cursor-pointer ">House of Nykaa</p>
                     </div>
 
                 </div>
             </div>
 
             <div className="flex overflow-x-auto scrollbar-hide  mt-6 "ref={containerRef}>
-            <div className="ml-17 mt-8 flex-shrink-0 w-[1248px]">
+            <div className="ml-17 mt-8 flex-shrink-0 w-[1248px] hover:cursor-pointer  ">
              <div className="flex ">
             <img src="https://images-static.nykaa.com/uploads/2c60c4f0-fd46-460a-a549-c68b0511da0d.jpg?tr=w-300,cm-pad_resize"
             className=" "
@@ -106,8 +107,8 @@ function HomePage(){
             </div>
             </div>
 
-            <div className=" mt-8 flex-shrink-0 w-[1248px]">
-            <div className="flex">
+            <div className=" mt-8 flex-shrink-0 w-full overflow-x-auto scrollbar-hide -mr-50  hover:cursor-pointer ">
+            <div className="flex ">
                 <img src="https://images-static.nykaa.com/uploads/93ad2e6f-449b-46ee-a412-03bd46ba46cf.jpg?tr=w-300,cm-pad_resize"
                 />
                 <img src="https://images-static.nykaa.com/uploads/a82b7c46-9a0f-458f-aad5-98a3b0590ebe.jpg?tr=w-300,cm-pad_resize"
@@ -131,6 +132,73 @@ function HomePage(){
                 </div>
                 </div>
                 </div>
+            
+
+                 <div className="ml-15 mt-5">
+                <p className="font-semibold text-gray-500">IN THE SPOTLIGHT</p>
+                <p className="text-2xl  font-semibold">Hottest brands on offer</p>
+                </div>
+
+                <div className="flex ml-15 gap-5 mt-5">
+                    <Link to={`/rendring?categoryId=4495`}><img src="https://images-static.nykaa.com/uploads/4ee71bd4-d592-4667-8a93-821f1bc21e0c.jpg?tr=w-240,cm-pad_resize"
+                    className="w-55 h-72 hover:cursor-pointer"
+                    /></Link>
+
+                     <Link><img src="https://images-static.nykaa.com/uploads/8139734a-fb9b-40e0-a3a5-270586a7186d.jpg?tr=w-240,cm-pad_resize"
+                    className="w-55 h-72 hover:cursor-pointer"
+                    /></Link>
+                     <Link><img src="https://images-static.nykaa.com/uploads/872c74cd-57b7-42e3-bcd1-473bd22329ba.jpg?tr=w-240,cm-pad_resize"
+                    className="w-55 h-72 hover:cursor-pointer"
+                    /></Link>
+                     <Link><img src="https://images-static.nykaa.com/uploads/a7a3309d-e433-4e2f-847b-63351fe6d9e7.jpg?tr=w-240,cm-pad_resize"
+                    className="w-55 h-72 hover:cursor-pointer"
+                    /></Link>
+                     <Link><img src="https://images-static.nykaa.com/uploads/e53da35f-45f8-4bbf-bf07-d7bbab193c3c.jpg?tr=w-240,cm-pad_resize"
+                    className="w-55 h-72 hover:cursor-pointer"
+                    /></Link>
+                   
+
+                </div> 
+                 <div className="flex gap-6 ml-15 mt-1">
+                        <div><p className="font-semibold">Up to 50% off</p><p className="text-gray-600">Stylish & elegant dresses</p></div>
+                        <div className="ml-10"><p className="font-semibold hover:cursor-pointer">Up to 70% off</p><p className="text-gray-600 hover:cursor-pointer">Chic dresses & tops</p></div>
+                        <div className="ml-19"><p className="font-semibold hover:cursor-pointer">Min 30% off</p><p className="text-gray-600 hover:cursor-pointer">Stylish ethnicwear</p></div>
+                        <div className="ml-23"><p className="font-semibold hover:cursor-pointer">Min 40% off</p><p className="text-gray-600 hover:cursor-pointer">Bestselling activewear</p></div>
+                        <div className="ml-15"><p className="font-semibold hover:cursor-pointer">Up to 60% off</p><p className="text-gray-600 hover:cursor-pointer">Trendiest global styles</p></div>
+                    </div>
+
+                    <div className="flex gap-5 mt-3 ml-15">
+                        <img src="https://images-static.nykaa.com/uploads/dfc27d41-6e25-4de7-b3d6-d9a1a9eef168.jpg?tr=w-240,cm-pad_resize"
+                        className="w-55 h-72 hover:cursor-pointer"
+                        />
+                         <img src="https://images-static.nykaa.com/uploads/3f114b5f-13cd-438f-9931-138a12b7fd4f.jpg?tr=w-240,cm-pad_resize"
+                        className="w-55 h-72 hover:cursor-pointer"
+                        />
+                         <img src="https://images-static.nykaa.com/uploads/431d9325-ad4e-4145-8b89-00a70b2785a4.jpg?tr=w-240,cm-pad_resize"
+                        className="w-55 h-72 hover:cursor-pointer"
+                        />
+                         <img src="https://images-static.nykaa.com/uploads/d5d2453f-16b5-4e32-9fa4-1105e3d246ab.jpg?tr=w-240,cm-pad_resize"
+                        className="w-55 h-72 hover:cursor-pointer"
+                        />
+                        <img src="https://images-static.nykaa.com/uploads/95126df6-b360-476a-b63b-c0ed74c6d6b3.jpg?tr=w-240,cm-pad_resize"
+                        
+                        className="w-55 h-72 hover:cursor-pointer"
+                        />
+
+                    </div>
+                    <div className="flex gap-6 ml-15 mt-1">
+                        <div><p className="font-semibold">Up to 25% off</p><p className="text-gray-600">Chic printed co-ords</p></div>
+                         <div className="ml-18"><p className="font-semibold hover:cursor-pointer">Up to 50% off</p><p className="text-gray-600 hover:cursor-pointer">Comfort-first styles</p></div>
+                          <div className="ml-20"><p className="font-semibold hover:cursor-pointer">Min 30% off</p><p className="text-gray-600">Cool casuals</p></div>
+                           <div className="ml-32"><p className="font-semibold hover:cursor-pointer">Min 50% off</p><p className="text-gray-600 hover:cursor-pointer">Cute ethnics & casuals</p></div>
+                            <div className="ml-15"><p className="font-semibold hover:cursor-pointer">Up to 30% off</p><p className="text-gray-600 hover:cursor-pointer">Aesthetic home decor</p></div>
+                    </div>
+
+                    <div>
+                        <img src="https://images-static.nykaa.com/uploads/e1fa220b-4754-494b-92a2-9c91b55cccdb.jpg?tr=w-1200,cm-pad_resize"
+                         className="w-[1130px] ml-15 mt-10 hover:cursor-pointer m"
+                        />
+                    </div>
 
            
             </div>

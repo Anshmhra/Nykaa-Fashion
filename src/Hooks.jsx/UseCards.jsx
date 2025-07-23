@@ -1,3 +1,87 @@
+import { concat } from "lodash";
+import { useState,useEffect } from "react"
+function useCards(catagoryID){
+
+    const [Detail,setDetail]=useState([]);
+
+
+    useEffect(()=>{
+
+        if(!catagoryID) return;
+        fetch(`https://www.nykaafashion.com/rest/appapi/V2/categories/products?PageSize=36&filter_format=v2&apiVersion=5&currency=INR&country_code=IN&deviceType=WEBSITE&sort=popularity&device_os=desktop&categoryId=4495&currentPage=1&sort_algo=default`)
+        .then((Response)=>Response.json())
+        .then((data)=>{
+            console.log(data)
+            setDetail(data);
+
+        })
+        .catch((error)=>console.log(error));
+        
+
+    },[catagoryID]);
+
+
+
+    return Detail;
+}
+export  default useCards;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // import { useState,useEffect } from "react"
 
 // function UseMiddleBody(){
