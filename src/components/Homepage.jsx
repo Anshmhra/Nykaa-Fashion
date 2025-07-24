@@ -26,13 +26,13 @@ function HomePage(){
         <div>
             <div>
                 <img src="https://images-static.nykaa.com/uploads/e8e8c9be-714d-4464-83ca-3c40be53fe41.jpg?tr=w-1200,cm-pad_resize"
-                className="w-full hover:cursor-pointer"
+                className="w-[1270px] ml-10 rounded-2xl mt-4 hover:cursor-pointer"
                 />
-                <div className="ml-12 mt-4">
+                <div className="ml-12 mt-6">
                 <p className="text-[18px] font-semibold text-gray-500">Our Stores</p>
                 <p className="text-[20px] font-semibold">Find everything for your every need</p>
                 </div>
-                <div className="overflow-x-auto scrollbar-hide mr-12 whitespace-nowrap">
+                <div className="overflow-x-auto scrollbar-hide mr-17 whitespace-nowrap ml-15">
                 <div className="flex gap-5 ml-12 mt-6 ">
                     <img src="https://images-static.nykaa.com/uploads/8f13793a-0156-49af-b20c-2323ec6cde3f.jpg?tr=w-120,cm-pad_resize"
                     className="w-35 h-35 hover:cursor-pointer"
@@ -144,16 +144,16 @@ function HomePage(){
                     className="w-55 h-72 hover:cursor-pointer"
                     /></Link>
 
-                     <Link><img src="https://images-static.nykaa.com/uploads/8139734a-fb9b-40e0-a3a5-270586a7186d.jpg?tr=w-240,cm-pad_resize"
+                     <Link to={`/rendring?categoryId=4240`}><img src="https://images-static.nykaa.com/uploads/8139734a-fb9b-40e0-a3a5-270586a7186d.jpg?tr=w-240,cm-pad_resize"
                     className="w-55 h-72 hover:cursor-pointer"
                     /></Link>
-                     <Link><img src="https://images-static.nykaa.com/uploads/872c74cd-57b7-42e3-bcd1-473bd22329ba.jpg?tr=w-240,cm-pad_resize"
+                     <Link to={`/rendring?categoryId=3680`}><img src="https://images-static.nykaa.com/uploads/872c74cd-57b7-42e3-bcd1-473bd22329ba.jpg?tr=w-240,cm-pad_resize"
                     className="w-55 h-72 hover:cursor-pointer"
                     /></Link>
-                     <Link><img src="https://images-static.nykaa.com/uploads/a7a3309d-e433-4e2f-847b-63351fe6d9e7.jpg?tr=w-240,cm-pad_resize"
+                     <Link to={`/rendring?categoryId=4886`}><img src="https://images-static.nykaa.com/uploads/a7a3309d-e433-4e2f-847b-63351fe6d9e7.jpg?tr=w-240,cm-pad_resize"
                     className="w-55 h-72 hover:cursor-pointer"
                     /></Link>
-                     <Link><img src="https://images-static.nykaa.com/uploads/e53da35f-45f8-4bbf-bf07-d7bbab193c3c.jpg?tr=w-240,cm-pad_resize"
+                     <Link to={`/rendring?categoryId=15204`}><img src="https://images-static.nykaa.com/uploads/e53da35f-45f8-4bbf-bf07-d7bbab193c3c.jpg?tr=w-240,cm-pad_resize"
                     className="w-55 h-72 hover:cursor-pointer"
                     /></Link>
                    
@@ -168,22 +168,22 @@ function HomePage(){
                     </div>
 
                     <div className="flex gap-5 mt-3 ml-15">
-                        <img src="https://images-static.nykaa.com/uploads/dfc27d41-6e25-4de7-b3d6-d9a1a9eef168.jpg?tr=w-240,cm-pad_resize"
+                        <Link to={`/rendring?categoryId=12071`}><img src="https://images-static.nykaa.com/uploads/dfc27d41-6e25-4de7-b3d6-d9a1a9eef168.jpg?tr=w-240,cm-pad_resize"
                         className="w-55 h-72 hover:cursor-pointer"
-                        />
-                         <img src="https://images-static.nykaa.com/uploads/3f114b5f-13cd-438f-9931-138a12b7fd4f.jpg?tr=w-240,cm-pad_resize"
+                        /></Link>
+                        <Link to={`/rendring?categoryId=6559`}><img src="https://images-static.nykaa.com/uploads/3f114b5f-13cd-438f-9931-138a12b7fd4f.jpg?tr=w-240,cm-pad_resize"
                         className="w-55 h-72 hover:cursor-pointer"
-                        />
-                         <img src="https://images-static.nykaa.com/uploads/431d9325-ad4e-4145-8b89-00a70b2785a4.jpg?tr=w-240,cm-pad_resize"
+                        /></Link> 
+                         <Link to={`/rendring?categoryId=11674`}><img src="https://images-static.nykaa.com/uploads/431d9325-ad4e-4145-8b89-00a70b2785a4.jpg?tr=w-240,cm-pad_resize"
                         className="w-55 h-72 hover:cursor-pointer"
-                        />
-                         <img src="https://images-static.nykaa.com/uploads/d5d2453f-16b5-4e32-9fa4-1105e3d246ab.jpg?tr=w-240,cm-pad_resize"
+                        /></Link>
+                         <Link to={`/rendring?categoryId=13161`}><img src="https://images-static.nykaa.com/uploads/d5d2453f-16b5-4e32-9fa4-1105e3d246ab.jpg?tr=w-240,cm-pad_resize"
                         className="w-55 h-72 hover:cursor-pointer"
-                        />
-                        <img src="https://images-static.nykaa.com/uploads/95126df6-b360-476a-b63b-c0ed74c6d6b3.jpg?tr=w-240,cm-pad_resize"
+                        /></Link>
+                        <Link to={`/rendring?categoryId=9543`}><img src="https://images-static.nykaa.com/uploads/95126df6-b360-476a-b63b-c0ed74c6d6b3.jpg?tr=w-240,cm-pad_resize"
                         
                         className="w-55 h-72 hover:cursor-pointer"
-                        />
+                        /></Link>
 
                     </div>
                     <div className="flex gap-6 ml-15 mt-1">

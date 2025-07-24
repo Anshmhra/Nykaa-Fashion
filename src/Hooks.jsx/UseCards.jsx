@@ -1,24 +1,34 @@
 import { concat } from "lodash";
 import { useState,useEffect } from "react"
-function useCards(catagoryID){
+function useCards(categoryID){
 
     const [Detail,setDetail]=useState([]);
+   
+
 
 
     useEffect(()=>{
 
-        if(!catagoryID) return;
-        fetch(`https://www.nykaafashion.com/rest/appapi/V2/categories/products?PageSize=36&filter_format=v2&apiVersion=5&currency=INR&country_code=IN&deviceType=WEBSITE&sort=popularity&device_os=desktop&categoryId=4495&currentPage=1&sort_algo=default`)
+        if(!categoryID) {
+             console.log("⚠️ No categoryID passed to useCards");
+              return;
+        }
+
+           
+        fetch(`https://www.nykaafashion.com/rest/appapi/V2/categories/products?PageSize=36&filter_format=v2&apiVersion=5&currency=INR&country_code=IN&deviceType=WEBSITE&sort=popularity&device_os=desktop&categoryId=${categoryID}&currentPage=1&sort_algo=default`)
         .then((Response)=>Response.json())
         .then((data)=>{
-            console.log(data)
-            setDetail(data);
+
+            const teho=(data?.response?.products || []);
+
+           setDetail(teho);
+           console.log(data);
 
         })
         .catch((error)=>console.log(error));
         
 
-    },[catagoryID]);
+    },[categoryID]);
 
 
 

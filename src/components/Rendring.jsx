@@ -1,19 +1,74 @@
 
 import { useSearchParams } from "react-router-dom";
 import useCards from "../Hooks.jsx/UseCards"; 
+import { useState,useEffect } from "react";
+import { MdCurrencyRupee } from "react-icons/md";
 
 function Rendring(){
 
-    const cards=useCards();
-    if(!cards){
-        return <div>Loading...</div>
-    }
+    
+   
+  
 
       const [searchParams] = useSearchParams();
         const categoryId = searchParams.get("categoryId");
+
+
+
+
+         const Detail=useCards(categoryId);
+         
+
+
+  if (!categoryId) {
+    return <div>Loading category...</div>;
+  }
+
+        
+        
+
     return(
         <div>
-            <h1></h1>
+            <div className=" ml-12 mr-15 flex flex-wrap mt-20 justify-center gap-7">
+          {Detail.map((item,id)=>(
+
+            item?.imageUrl &&(
+                <div key={id} className="rounded-2xl hover:shadow-2xl object-cover overflow-hidden hover:cursor-pointer hover:scale-95 duration-300 ">
+                 <img src={item.imageUrl}
+                 alt={id}
+                 className="w-60 h-78"
+                 /> 
+                 <div className="ml-1 mb-4 ">
+                    <div className="flex gap-1 text-[13px]">
+                         {item?.tag?.[0]?.title && (
+                      <div className="p-2 rounded text-center  mt-1 -ml-1  bg-blue-100">
+                      <p >{item.tag[0].title}</p>
+                    </div>
+                    )}
+                      {item?.tag?.[1]?.title && (
+                        <div className="p-1 rounded text-center mt-1 bg-blue-100">
+                        <p className="mt-1">{item.tag[1].title}</p>
+                        </div>
+                    )}
+                   
+                    </div>
+                 <p className="text-[15px] font-semibold">{item.title}</p>
+                 <p className="text-[15px] text-gray-500 overflow-hidden whitespace-nowrap text-ellipsis truncate  max-w-[220px]">{item.subTitle}</p>
+                 <div className="flex gap-2">
+                 <MdCurrencyRupee className="mt-1 text-gray-700"/><p className=" -ml-1 text-gray-800">{item.discountedPrice}</p>
+                 <MdCurrencyRupee className="text-[14px] mt-1 text-gray-500"/><p className="text-gray-500 line-through text-[14px] -ml-1 ">{item.price}</p>
+                 <p className="text-emerald-600 text-[14px]">{item.discount}%</p>
+                 </div>
+                 <p className="text-[14px] text-emerald-600">{item.dynamic_text.title}</p>
+                 </div>
+                 </div>
+
+            )
+           
+         ))
+
+          }
+          </div>
 
         </div>
     )

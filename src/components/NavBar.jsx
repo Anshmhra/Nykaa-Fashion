@@ -16,7 +16,7 @@ function NavBar(){
     return(
         <div>
              
-            <div className="bg-black h-8 text-white w-314" >
+            <div className="bg-black h-8 text-white w-338" >
                 
                <nav >
                 <ul className="flex justify-end gap-6 mr-20">
@@ -87,7 +87,7 @@ function NavBar(){
                     <li className="hover:text-pink-600 hover:cursor-pointer">All Brands</li>
                 </ul>
                 <div className="flex">
-                  <div className="bg-gray-100 w-8 h-9 mt-4">
+                  <div className="bg-gray-100 w-8 h-9 mt-4 ml-5">
                <IoMdSearch className="w-10 h-6 mt-2"/></div>
                 <input type="search"
                 placeholder=" Search On Nykaa..."
