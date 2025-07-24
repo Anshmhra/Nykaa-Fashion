@@ -33,36 +33,37 @@ function HomePage(){
                 <p className="text-[20px] font-semibold">Find everything for your every need</p>
                 </div>
                 <div className="overflow-x-auto scrollbar-hide mr-17 whitespace-nowrap ml-15">
-                <div className="flex gap-5 ml-12 mt-6 ">
-                    <img src="https://images-static.nykaa.com/uploads/8f13793a-0156-49af-b20c-2323ec6cde3f.jpg?tr=w-120,cm-pad_resize"
-                    className="w-35 h-35 hover:cursor-pointer"
-                    />
+                <div className="flex gap-5 ml-10 mt-6 w-360 ">
                     
-                     <img src="https://images-static.nykaa.com/uploads/c1f68994-bc6d-4fb0-9cac-d0ce47d67838.jpg?tr=w-120,cm-pad_resize"
-                     className="w-35 h-35 hover:cursor-pointer"
-                    />
-                     <img src="https://images-static.nykaa.com/uploads/49e6ae70-6e96-44d6-8d56-a5359731b8ec.jpg?tr=w-120,cm-pad_resize"
-                     className="w-35 h-35 hover:cursor-pointer"
-                    />
-                     <img src="https://images-static.nykaa.com/uploads/a66486e0-8eb4-4ef1-a6be-4a135f16432a.jpg?tr=w-120,cm-pad_resize"
-                     className="w-35 h-35 hover:cursor-pointer"
-                    />
-                     <img src="https://images-static.nykaa.com/uploads/585628e7-8d3a-45b1-aedc-195daff883ff.jpg?tr=w-120,cm-pad_resize"
-                     className="w-35 h-35 hover:cursor-pointer"
-                    />
-                     <img src="https://images-static.nykaa.com/uploads/d92a7ba6-ed6b-4d4e-a3ed-2524525ee042.jpg?tr=w-120,cm-pad_resize"
+                    <Link to={`/circle?brandId=6557`}><img src="https://images-static.nykaa.com/uploads/8f13793a-0156-49af-b20c-2323ec6cde3f.jpg?tr=w-120,cm-pad_resize"
+                    className="w-45 h-35 hover:cursor-pointer"
+                    /></Link>
                     
-                     className="w-35 h-35 hover:cursor-pointer"
-                     />
-                     <img src="https://images-static.nykaa.com/uploads/3918fadc-f7d4-4c90-b698-05a083736705.jpg?tr=w-120,cm-pad_resize"
-                     className="w-35 h-35 hover:cursor-pointer"
-                    />
-                     <img src="https://images-static.nykaa.com/uploads/d2145972-3bfb-4f68-aff1-2b6bb376b59b.jpg?tr=w-120,cm-pad_resize"
-                     className="w-35 h-35 hover:cursor-pointer"
-                    />
-                     <img src="https://images-static.nykaa.com/uploads/f6a1b761-90bb-483c-ae5d-e17184459fd2.jpg?tr=w-120,cm-pad_resize"
-                     className="w-35 h-35 hover:cursor-pointer"
-                    />
+                     <Link to={`/circle?brandId=6823`}><img src="https://images-static.nykaa.com/uploads/c1f68994-bc6d-4fb0-9cac-d0ce47d67838.jpg?tr=w-120,cm-pad_resize"
+                     className="w-45 h-35 hover:cursor-pointer"
+                    /></Link>
+                     <Link to={`/circle?brandId=6266`}><img src="https://images-static.nykaa.com/uploads/49e6ae70-6e96-44d6-8d56-a5359731b8ec.jpg?tr=w-120,cm-pad_resize"
+                     className="w-45 h-35 hover:cursor-pointer"
+                    /></Link>
+                     <Link to={`/circle?brandId=8528`}><img src="https://images-static.nykaa.com/uploads/a66486e0-8eb4-4ef1-a6be-4a135f16432a.jpg?tr=w-120,cm-pad_resize"
+                     className="w-45 h-35 hover:cursor-pointer"
+                    /></Link>
+                     <Link to={`/circle?brandId=57205`}><img src="https://images-static.nykaa.com/uploads/585628e7-8d3a-45b1-aedc-195daff883ff.jpg?tr=w-120,cm-pad_resize"
+                     className="w-45 h-35 hover:cursor-pointer"
+                    /></Link>
+                     <Link to={`/circle?brandId=7266`}><img src="https://images-static.nykaa.com/uploads/d92a7ba6-ed6b-4d4e-a3ed-2524525ee042.jpg?tr=w-120,cm-pad_resize"
+                    
+                     className="w-45 h-35 hover:cursor-pointer"
+                     /></Link>
+                     <Link to={`/circle?brandId=6557`}><img src="https://images-static.nykaa.com/uploads/3918fadc-f7d4-4c90-b698-05a083736705.jpg?tr=w-120,cm-pad_resize"
+                     className="w-45 h-35 hover:cursor-pointer"
+                    /></Link>
+                     <Link to={`/circle?brandId=14334`}><img src="https://images-static.nykaa.com/uploads/d2145972-3bfb-4f68-aff1-2b6bb376b59b.jpg?tr=w-120,cm-pad_resize"
+                     className="w-45 h-35 hover:cursor-pointer"
+                    /></Link>
+                     <Link to={`/circle?brandId=13388`}><img src="https://images-static.nykaa.com/uploads/f6a1b761-90bb-483c-ae5d-e17184459fd2.jpg?tr=w-120,cm-pad_resize"
+                     className="w-45 h-35 hover:cursor-pointer"
+                    /></Link>
                      
  
                     
@@ -73,7 +74,7 @@ function HomePage(){
                   <p className="ml-24 font-semibold  hover:cursor-pointer">Kids</p>
                    <p className="ml-24 font-semibold  hover:cursor-pointer">Home</p>
                     <p className="ml-18 font-semibold w- hover:cursor-pointer"  >Luxs Edit</p> 
-                    <p className="ml-15 font-semibold  hover:cursor-pointer">Home Gems</p>
+                    <p className="ml-15 font-semibold  hover:cursor-pointer">Hidden Gems</p>
                     <p className="ml-12 font-semibold  hover:cursor-pointer">Global Store</p>
                     <p className="ml-12 font-semibold  hover:cursor-pointer">Revolve</p>
                     <p className="ml-12 w-50 font-semibold hover:cursor-pointer ">House of Nykaa</p>

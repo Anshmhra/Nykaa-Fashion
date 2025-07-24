@@ -36,7 +36,7 @@ function Rendring(){
                 <div key={id} className="rounded-2xl hover:shadow-2xl object-cover overflow-hidden hover:cursor-pointer hover:scale-95 duration-300 ">
                  <img src={item.imageUrl}
                  alt={id}
-                 className="w-60 h-78"
+                 className="w-full h-[320px]  object-cover rounded"
                  /> 
                  <div className="ml-1 mb-4 ">
                     <div className="flex gap-1 text-[13px]">
