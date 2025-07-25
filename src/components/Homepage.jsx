@@ -25,9 +25,9 @@ function HomePage(){
     return(
         <div>
             <div>
-                <img src="https://images-static.nykaa.com/uploads/e8e8c9be-714d-4464-83ca-3c40be53fe41.jpg?tr=w-1200,cm-pad_resize"
+                <Link to={`/circle?brandId=74296`}><img src="https://images-static.nykaa.com/uploads/e8e8c9be-714d-4464-83ca-3c40be53fe41.jpg?tr=w-1200,cm-pad_resize"
                 className="w-[1270px] ml-10 rounded-2xl mt-4 hover:cursor-pointer"
-                />
+                /></Link>
                 <div className="ml-12 mt-6">
                 <p className="text-[18px] font-semibold text-gray-500">Our Stores</p>
                 <p className="text-[20px] font-semibold">Find everything for your every need</p>
@@ -86,34 +86,34 @@ function HomePage(){
             <div className="flex overflow-x-auto scrollbar-hide  mt-6 "ref={containerRef}>
             <div className="ml-17 mt-8 flex-shrink-0 w-[1248px] hover:cursor-pointer  ">
              <div className="flex ">
-            <img src="https://images-static.nykaa.com/uploads/2c60c4f0-fd46-460a-a549-c68b0511da0d.jpg?tr=w-300,cm-pad_resize"
+            <Link to={`/circle?brandId=57205`}><img src="https://images-static.nykaa.com/uploads/2c60c4f0-fd46-460a-a549-c68b0511da0d.jpg?tr=w-300,cm-pad_resize"
             className=" "
-            />
-            <img src="https://images-static.nykaa.com/uploads/6129c9d8-9b96-4b00-a6ff-d8e1ba059abe.jpg?tr=w-300,cm-pad_resize"
-            />
-            <img src="https://images-static.nykaa.com/uploads/3e8eaaca-99ea-40c6-9740-f193e1798b37.jpg?tr=w-300,cm-pad_resize"
-            />
-            <img src="https://images-static.nykaa.com/uploads/5703d929-e825-4673-819b-e30694640d21.jpg?tr=w-300,cm-pad_resize"
-            />
+            /></Link>
+            <Link to={`/circle?brandId=57205`}><img src="https://images-static.nykaa.com/uploads/6129c9d8-9b96-4b00-a6ff-d8e1ba059abe.jpg?tr=w-300,cm-pad_resize"
+            /></Link>
+            <Link to={`/circle?brandId=652`}><img src="https://images-static.nykaa.com/uploads/3e8eaaca-99ea-40c6-9740-f193e1798b37.jpg?tr=w-300,cm-pad_resize"
+            /></Link>
+            <Link to={`/circle?brandId=3`}><img src="https://images-static.nykaa.com/uploads/5703d929-e825-4673-819b-e30694640d21.jpg?tr=w-300,cm-pad_resize"
+            /></Link>
             </div>
             <div className="flex">
-            <img src="https://images-static.nykaa.com/uploads/dc45b5f1-8b81-452d-9b9a-33434377dc61.jpg?tr=w-300,cm-pad_resize"
-            />
-            <img src="https://images-static.nykaa.com/uploads/8286489c-2d2b-4891-aaba-485cac019e92.jpg?tr=w-300,cm-pad_resize"
-            />
-            <img src="https://images-static.nykaa.com/uploads/bea04ddc-9c81-4c9b-a539-a7642054ce65.jpg?tr=w-300,cm-pad_resize"
-            />
-            <img src="https://images-static.nykaa.com/uploads/0c425ece-4844-41cd-a5d9-d333aa443071.jpg?tr=w-300,cm-pad_resize"
-            />
+           <Link to={`/circle?brandId=57205`}><img src="https://images-static.nykaa.com/uploads/dc45b5f1-8b81-452d-9b9a-33434377dc61.jpg?tr=w-300,cm-pad_resize"
+            /></Link> 
+             <Link to={`/circle?brandId=57205`}><img src="https://images-static.nykaa.com/uploads/8286489c-2d2b-4891-aaba-485cac019e92.jpg?tr=w-300,cm-pad_resize"
+            /></Link>
+            <Link to={`/circle?brandId=`}><img src="https://images-static.nykaa.com/uploads/bea04ddc-9c81-4c9b-a539-a7642054ce65.jpg?tr=w-300,cm-pad_resize"
+            /></Link>
+            <Link><img src="https://images-static.nykaa.com/uploads/0c425ece-4844-41cd-a5d9-d333aa443071.jpg?tr=w-300,cm-pad_resize"
+            /></Link>
             </div>
             </div>
 
             <div className=" mt-8 flex-shrink-0 w-full overflow-x-auto scrollbar-hide -mr-50  hover:cursor-pointer ">
             <div className="flex ">
-                <img src="https://images-static.nykaa.com/uploads/93ad2e6f-449b-46ee-a412-03bd46ba46cf.jpg?tr=w-300,cm-pad_resize"
-                />
-                <img src="https://images-static.nykaa.com/uploads/a82b7c46-9a0f-458f-aad5-98a3b0590ebe.jpg?tr=w-300,cm-pad_resize"
-                />
+                <Link to={`/circle?brandId=7266`}><img src="https://images-static.nykaa.com/uploads/93ad2e6f-449b-46ee-a412-03bd46ba46cf.jpg?tr=w-300,cm-pad_resize"
+                /></Link>
+                <Link to={`/circle?brandId=7266`}><img src="https://images-static.nykaa.com/uploads/a82b7c46-9a0f-458f-aad5-98a3b0590ebe.jpg?tr=w-300,cm-pad_resize"
+                /></Link>
                 <img src="https://images-static.nykaa.com/uploads/8555b963-8234-4208-8d61-f0aacbdb9d8e.jpg?tr=w-300,cm-pad_resize"
                 />
                 <img src="https://images-static.nykaa.com/uploads/2e67c9bc-4723-4394-8524-45b9605dad67.jpg?tr=w-300,cm-pad_resize"
@@ -122,10 +122,10 @@ function HomePage(){
 
              <div className="flex">
 
-                <img src="https://images-static.nykaa.com/uploads/3c7f5d87-4153-4a77-86c5-e7e06a4e3d0a.jpg?tr=w-300,cm-pad_resize"
-                />
-                <img src="https://images-static.nykaa.com/uploads/9501565b-945c-45c4-bb7b-1e45411f0cef.jpg?tr=w-300,cm-pad_resize"
-                />
+                <Link to={`/circle?brandId=7266`}><img src="https://images-static.nykaa.com/uploads/3c7f5d87-4153-4a77-86c5-e7e06a4e3d0a.jpg?tr=w-300,cm-pad_resize"
+                /></Link>
+                <Link to={`/circle?brandId=7266`}><img src="https://images-static.nykaa.com/uploads/9501565b-945c-45c4-bb7b-1e45411f0cef.jpg?tr=w-300,cm-pad_resize"
+                /></Link>
                 <img src="https://images-static.nykaa.com/uploads/88017de3-00ed-4f2d-9945-947d5e1221a1.jpg?tr=w-300,cm-pad_resize"
                 />
                 <img src="https://images-static.nykaa.com/uploads/fa66ba24-b82c-479d-b108-9e7be02188ab.jpg?tr=w-300,cm-pad_resize"
