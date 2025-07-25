@@ -12,7 +12,7 @@ function Rendring(){
 
       const [searchParams] = useSearchParams();
         const categoryId = searchParams.get("categoryId");
-
+     
 
 
 

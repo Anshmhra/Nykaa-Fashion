@@ -6,7 +6,17 @@ function Circle(){
 
     const [searchParams] = useSearchParams();
        const brandId = searchParams.get("brandId");
-    const Call=useCircles(brandId);
+
+
+        const filters = {};
+  searchParams.forEach((value, key) => {
+    if (key !== "brandId") {
+      filters[key] = value;
+    }
+  });
+
+
+    const Call=useCircles(brandId,filters);
 
     if (!brandId || !Call) {
     return <div>Loading brands...</div>;

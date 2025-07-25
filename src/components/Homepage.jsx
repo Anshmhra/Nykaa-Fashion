@@ -93,7 +93,7 @@ function HomePage(){
             /></Link>
             <Link to={`/circle?brandId=652`}><img src="https://images-static.nykaa.com/uploads/3e8eaaca-99ea-40c6-9740-f193e1798b37.jpg?tr=w-300,cm-pad_resize"
             /></Link>
-            <Link to={`/circle?brandId=3`}><img src="https://images-static.nykaa.com/uploads/5703d929-e825-4673-819b-e30694640d21.jpg?tr=w-300,cm-pad_resize"
+            <Link to={`/circle?brandId=3&new_tags_filter=luxe&occasion_filter=31659_31760`}><img src="https://images-static.nykaa.com/uploads/5703d929-e825-4673-819b-e30694640d21.jpg?tr=w-300,cm-pad_resize"
             /></Link>
             </div>
             <div className="flex">
@@ -101,7 +101,7 @@ function HomePage(){
             /></Link> 
              <Link to={`/circle?brandId=57205`}><img src="https://images-static.nykaa.com/uploads/8286489c-2d2b-4891-aaba-485cac019e92.jpg?tr=w-300,cm-pad_resize"
             /></Link>
-            <Link to={`/circle?brandId=`}><img src="https://images-static.nykaa.com/uploads/bea04ddc-9c81-4c9b-a539-a7642054ce65.jpg?tr=w-300,cm-pad_resize"
+            <Link to={`/circle?brandId=3&pattern_filter=1588_333`}><img src="https://images-static.nykaa.com/uploads/bea04ddc-9c81-4c9b-a539-a7642054ce65.jpg?tr=w-300,cm-pad_resize"
             /></Link>
             <Link><img src="https://images-static.nykaa.com/uploads/0c425ece-4844-41cd-a5d9-d333aa443071.jpg?tr=w-300,cm-pad_resize"
             /></Link>
