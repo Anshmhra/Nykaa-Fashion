@@ -1,7 +1,11 @@
 import { useLocation } from "react-router-dom";
 import { MdCurrencyRupee } from "react-icons/md";
+import { useState } from "react";
+import { RiHeartAddLine } from "react-icons/ri";
 function Product(){
     const location = useLocation();
+    const [selectedColor, setSelectedColor] = useState(null);
+    const [selectedSize, setSelectedSize] = useState(null);
 
      const item = location.state?.itemData;
      if (!item) return <div>No product data found.</div>;
@@ -48,6 +52,35 @@ function Product(){
 
           
           <hr className="my-6 border-gray-300" />
+
+              {Array.isArray(item.sibling_colour_codes) && item.sibling_colour_codes.length > 0 && (
+          <div className="mb-4 ml-3">
+            <p className="font-semibold text-lg mb-1">Select Color</p>
+            <div className="flex gap-2 items-center">
+              {item.sibling_colour_codes.slice(0, 4).map((color, index) => (
+                <div
+                  key={index}
+                  onClick={() =>
+                    setSelectedColor(prev=>prev === color ? null : color)}
+                  className={`w-5 h-5 rounded-full border-2 cursor-pointer transition-transform duration-200 hover:cursor-pointer ${
+                    selectedColor === color ? "border-pink-500 scale-110" : "border-gray-300"
+                  }`}
+                  style={{ backgroundColor: color }}
+                  title={color}
+                />
+              ))}
+              {item.sibling_colour_codes.length > 4 && (
+                <span className="text-xs text-gray-500">
+                  +{item.sibling_colour_codes.length - 4} more
+                </span>
+              )}
+            </div>
+          </div>
+        )}
+
+
+
+
         
          {item.sizeVariation?.length > 0 &&(
             <div>
@@ -60,18 +93,33 @@ function Product(){
 
           <div className="flex gap-3 flex-wrap">
             { item.sizeVariation?.map((size) => (
+
               <button
                 key={size.id}
-                className="border px-4 py-1 rounded-full hover:bg-gray-300 border-b-gray-300 border-t-gray-300 border-l-gray-300 border-r-gray-300 transition"
-              >
+                onClick={() => 
+                  setSelectedSize(prev=>prev === size.title ? null : size.title)
+                }
+
+                className={`border px-4 py-1 rounded-full transition hover:cursor-pointer
+                ${
+               selectedSize === size.title
+               ? "bg-pink-500 text-white border-pink-500"
+               : "hover:bg-gray-200 text-gray-800 border-gray-300"
+               }`}
+               >
                 {size.title}
               </button>
+
             ))}
             
           </div>
           </div>
 
          )}
+
+        <RiHeartAddLine className=" absolute ml-40 mt-14 w-8 h-6"/> <button className="text-[18px] font-semibold mt-10  w-100 h-15 border  rounded-2xl relative ml-15">Add to Wishist</button>
+        <button className="text-[18px] font-semibold mt-10  w-100 h-15 border  rounded-2xl relative ml-15 bg-black text-white">Add to Bag</button>
+        
         
         
           

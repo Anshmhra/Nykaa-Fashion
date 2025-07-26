@@ -14,6 +14,7 @@ import {createBrowserRouter,RouterProvider,} from "react-router-dom";
 
 
 
+
 function Main(){
     const Navbar=lazy(()=>import("./components/NavBar.jsx"));
      const HomePage=lazy(()=>import("./components/Homepage.jsx"));
@@ -24,6 +25,7 @@ function Main(){
       const Render=lazy(()=>import("./components/Rendring.jsx"));
       const Circle=lazy(()=>import("./components/Circle.jsx"));
       const Product=lazy(()=>import("./components/product.jsx"));
+      const MoreProduct=lazy(()=>import("./components/MoreProduct.jsx"))
 
 
        const router=createBrowserRouter([
@@ -74,6 +76,13 @@ function Main(){
                         path:"product",
                         element:<Suspense fallback={<div>Loading Home...</div>}>
                         <Product/>
+                         </Suspense>
+
+                    },
+                     {
+                        path:"moreproduct",
+                        element:<Suspense fallback={<div>Loading Home...</div>}>
+                        <MoreProduct/>
                          </Suspense>
 
                     }

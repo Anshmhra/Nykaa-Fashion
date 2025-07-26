@@ -58,6 +58,27 @@ function Rendring(){
                     </div>
                  <p className="text-[15px] font-semibold">{item.title}</p>
                  <p className="text-[15px] text-gray-500 overflow-hidden whitespace-nowrap text-ellipsis truncate  max-w-[220px]">{item.subTitle}</p>
+
+                  {
+                                    item?.sibling_colour_codes?.length > 0 &&(
+                                         <div className="flex gap-1 ml-1 mt-1 items-center">
+                                            {item.sibling_colour_codes?.slice(0, 4).map((color,Id)=>(
+                                                <div
+                                                key={Id}
+                                                className="w-4 h-4 rounded-full border border-gray-300"
+                                                style={{ backgroundColor: color }}
+                                               ></div>
+                                            ))
+                                            }
+                                            {
+                                                item?.sibling_colour_codes?.length > 4 &&(
+                                                    <span className="text-xs text-gray-500">+{item.sibling_colour_codes.length - 4} more</span>
+                                                )
+                                            }
+                                            </div>
+                                    )
+                                }
+
                  <div className="flex gap-2">
                  <MdCurrencyRupee className="mt-1 text-gray-700"/><p className=" -ml-1 text-gray-800">{item.discountedPrice}</p>
                  <MdCurrencyRupee className="text-[14px] mt-1 text-gray-500"/><p className="text-gray-500 line-through text-[14px] -ml-1 ">{item.price}</p>

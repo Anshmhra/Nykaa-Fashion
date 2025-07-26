@@ -1,6 +1,7 @@
 import useCircles from "../Hooks.jsx/UseCircles";
 import { useSearchParams } from "react-router-dom";
 import { MdCurrencyRupee } from "react-icons/md";
+import { Link } from "react-router-dom";
 
 function Circle(){
 
@@ -27,6 +28,8 @@ function Circle(){
                 {
                     Call.map((atom,idx)=>(
                         atom?.imageUrl &&(
+                            <Link to={"/moreproduct"}key={idx}   state={{ itemData: atom }}>
+
                             <div key={idx} className=" w-[230px]  rounded-2xl hover:shadow-2xl object-cover overflow-hidden hover:cursor-pointer hover:scale-95 duration-300 relative ">
                                 <img src={atom.imageUrl}
                                 alt={idx}
@@ -83,14 +86,16 @@ function Circle(){
                                 </div>
                                 </div>
                             </div>
+                            </Link>
 
                         )
 
                     ))
+                    
 
                 }
             </div>
-            {}
+            
         </div>
     )
 }
