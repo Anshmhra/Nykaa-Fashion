@@ -103,7 +103,7 @@ function HomePage(){
             /></Link>
             <Link to={`/circle?brandId=3&pattern_filter=1588_333`}><img src="https://images-static.nykaa.com/uploads/bea04ddc-9c81-4c9b-a539-a7642054ce65.jpg?tr=w-300,cm-pad_resize"
             /></Link>
-            <Link><img src="https://images-static.nykaa.com/uploads/0c425ece-4844-41cd-a5d9-d333aa443071.jpg?tr=w-300,cm-pad_resize"
+            <Link to={`/circle?brandId=57205&category_filter=10_153_155_156_159_164_3907_3908_3909_4497_4542_4543_5_5040_5262_57387_6264_647_6492_6498_652_66_662_69_7_7623_7630_8522_9237_9729`}><img src="https://images-static.nykaa.com/uploads/0c425ece-4844-41cd-a5d9-d333aa443071.jpg?tr=w-300,cm-pad_resize"
             /></Link>
             </div>
             </div>
@@ -114,10 +114,10 @@ function HomePage(){
                 /></Link>
                 <Link to={`/circle?brandId=7266`}><img src="https://images-static.nykaa.com/uploads/a82b7c46-9a0f-458f-aad5-98a3b0590ebe.jpg?tr=w-300,cm-pad_resize"
                 /></Link>
-                <img src="https://images-static.nykaa.com/uploads/8555b963-8234-4208-8d61-f0aacbdb9d8e.jpg?tr=w-300,cm-pad_resize"
-                />
-                <img src="https://images-static.nykaa.com/uploads/2e67c9bc-4723-4394-8524-45b9605dad67.jpg?tr=w-300,cm-pad_resize"
-                />
+                <Link to={`/circle?brandId=7266&category_filter=10_156_164_3907_3908_4543_5040_647_6498_652_662_69_7555_7630_8522`}><img src="https://images-static.nykaa.com/uploads/8555b963-8234-4208-8d61-f0aacbdb9d8e.jpg?tr=w-300,cm-pad_resize"
+                /></Link>
+                <Link to={`/circle?brandId=7266&currentPage=1&brand_filter=11089_11344_126_16567_17302_17866_18406_18647_18895_18991_4481_51284_51933_52066_53150_53475_53571_53588_53696_9575`}><img src="https://images-static.nykaa.com/uploads/2e67c9bc-4723-4394-8524-45b9605dad67.jpg?tr=w-300,cm-pad_resize"
+                /></Link>
              </div>
 
              <div className="flex">
@@ -126,10 +126,10 @@ function HomePage(){
                 /></Link>
                 <Link to={`/circle?brandId=7266`}><img src="https://images-static.nykaa.com/uploads/9501565b-945c-45c4-bb7b-1e45411f0cef.jpg?tr=w-300,cm-pad_resize"
                 /></Link>
-                <img src="https://images-static.nykaa.com/uploads/88017de3-00ed-4f2d-9945-947d5e1221a1.jpg?tr=w-300,cm-pad_resize"
-                />
-                <img src="https://images-static.nykaa.com/uploads/fa66ba24-b82c-479d-b108-9e7be02188ab.jpg?tr=w-300,cm-pad_resize"
-                />
+                <Link to={`/circle?brandId=7266&currentPage=1&category_filter=153_155_159_3909_4497_4542_5_5262_6264_6492_66_7_7623`}><img src="https://images-static.nykaa.com/uploads/88017de3-00ed-4f2d-9945-947d5e1221a1.jpg?tr=w-300,cm-pad_resize"
+                /></Link>
+                <Link to={`/circle?brandId=7266&sort=popularity&category_filter=4542`}><img src="https://images-static.nykaa.com/uploads/fa66ba24-b82c-479d-b108-9e7be02188ab.jpg?tr=w-300,cm-pad_resize"
+                /></Link>
                 </div>
                 </div>
                 </div>
@@ -148,7 +148,7 @@ function HomePage(){
                      <Link to={`/rendring?categoryId=4240`}><img src="https://images-static.nykaa.com/uploads/8139734a-fb9b-40e0-a3a5-270586a7186d.jpg?tr=w-240,cm-pad_resize"
                     className="w-55 h-72 hover:cursor-pointer"
                     /></Link>
-                     <Link to={`/rendring?categoryId=3680`}><img src="https://images-static.nykaa.com/uploads/872c74cd-57b7-42e3-bcd1-473bd22329ba.jpg?tr=w-240,cm-pad_resize"
+                     <Link to={`/rendring?categoryId=63680`}><img src="https://images-static.nykaa.com/uploads/872c74cd-57b7-42e3-bcd1-473bd22329ba.jpg?tr=w-240,cm-pad_resize"
                     className="w-55 h-72 hover:cursor-pointer"
                     /></Link>
                      <Link to={`/rendring?categoryId=4886`}><img src="https://images-static.nykaa.com/uploads/a7a3309d-e433-4e2f-847b-63351fe6d9e7.jpg?tr=w-240,cm-pad_resize"

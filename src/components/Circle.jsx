@@ -5,7 +5,7 @@ import { MdCurrencyRupee } from "react-icons/md";
 function Circle(){
 
     const [searchParams] = useSearchParams();
-       const brandId = searchParams.get("brandId");
+       const brandId = searchParams.getAll("brandId");
 
 
         const filters = {};

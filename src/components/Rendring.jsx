@@ -3,6 +3,7 @@ import { useSearchParams } from "react-router-dom";
 import useCards from "../Hooks.jsx/UseCards"; 
 import { useState,useEffect } from "react";
 import { MdCurrencyRupee } from "react-icons/md";
+import { Link } from "react-router-dom";
 
 function Rendring(){
 
@@ -32,7 +33,10 @@ function Rendring(){
             <div className=" ml-12 mr-15 flex flex-wrap mt-20 justify-center gap-7">
           {Detail.map((item,id)=>(
 
+            
+
             item?.imageUrl &&(
+              <Link  to="/product" key={id}   state={{ itemData: item }} >
                 <div key={id} className="rounded-2xl hover:shadow-2xl object-cover overflow-hidden hover:cursor-pointer hover:scale-95 duration-300 ">
                  <img src={item.imageUrl}
                  alt={id}
@@ -59,11 +63,12 @@ function Rendring(){
                  <MdCurrencyRupee className="text-[14px] mt-1 text-gray-500"/><p className="text-gray-500 line-through text-[14px] -ml-1 ">{item.price}</p>
                  <p className="text-emerald-600 text-[14px]">{item.discount}%</p>
                  </div>
-                 <p className="text-[14px] text-emerald-600">{item.dynamic_text.title}</p>
+                 <p className="text-[14px] text-emerald-600">{item.dynamic_text?.title}</p>
                  </div>
                  </div>
-
+                 </Link>
             )
+           
            
          ))
 
