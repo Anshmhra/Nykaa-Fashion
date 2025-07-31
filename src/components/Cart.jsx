@@ -27,7 +27,7 @@ function Cart(){
           </Link>
         </div>
       ) : (
-        <div className="w-7xl shadow-2xl m-10 h-140 mt-10 rounded-2xl">
+        <div className="w-7xl shadow-2xl m-10 h-auto mt-10 rounded-2xl">
   <ul className="space-y-6 ml-14">
     {
       CartProduct.map((item, id) => (
@@ -60,7 +60,7 @@ function Cart(){
                  ></div>
                 </div>
                 )
-               }
+}
 
                 
             </div>
