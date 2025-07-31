@@ -33,7 +33,7 @@ function HomePage(){
                 <p className="text-[20px] font-semibold">Find everything for your every need</p>
                 </div>
                 <div className="overflow-x-auto scrollbar-hide mr-17 whitespace-nowrap ml-15">
-                <div className="flex gap-5 ml-10 mt-6 w-360 ">
+                <div className="flex gap-5 ml-1 mt-6 w-360 ">
                     
                     <Link to={`/circle?brandId=6557`}><img src="https://images-static.nykaa.com/uploads/8f13793a-0156-49af-b20c-2323ec6cde3f.jpg?tr=w-120,cm-pad_resize"
                     className="w-45 h-35 hover:cursor-pointer"
@@ -68,7 +68,7 @@ function HomePage(){
  
                     
                 </div>
-                <div className="flex gap-7 ml-23">
+                <div className="flex gap-7 ml-13">
                 <p className="font-semibold hover:cursor-pointer">Women</p>
                  <p className="ml-22 font-semibold  hover:cursor-pointer">Men</p>
                   <p className="ml-24 font-semibold  hover:cursor-pointer">Kids</p>
@@ -83,8 +83,8 @@ function HomePage(){
                 </div>
             </div>
 
-            <div className="flex overflow-x-auto scrollbar-hide  mt-6 "ref={containerRef}>
-            <div className="ml-17 mt-8 flex-shrink-0 w-[1248px] hover:cursor-pointer  ">
+            <div className="flex overflow-x-auto scrollbar-hide mr-20 ml-15 mt-6 "ref={containerRef}>
+            <div className="ml-1 mt-8 flex-shrink-0 w-[1248px] hover:cursor-pointer  ">
              <div className="flex ">
             <Link to={`/circle?brandId=57205`}><img src="https://images-static.nykaa.com/uploads/2c60c4f0-fd46-460a-a549-c68b0511da0d.jpg?tr=w-300,cm-pad_resize"
             className=" "

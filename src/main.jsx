@@ -4,6 +4,7 @@ import { lazy, StrictMode, Suspense } from 'react'
 import './index.css'
 import App from './App.jsx'
 import {createBrowserRouter,RouterProvider,} from "react-router-dom";
+import { CartProvider } from './Context/CartContext.jsx';
 
 
 
@@ -26,6 +27,7 @@ function Main(){
       const Circle=lazy(()=>import("./components/Circle.jsx"));
       const Product=lazy(()=>import("./components/product.jsx"));
       const MoreProduct=lazy(()=>import("./components/MoreProduct.jsx"))
+      
 
 
        const router=createBrowserRouter([
@@ -92,7 +94,10 @@ function Main(){
 
     return(
         <>
-            <RouterProvider router={router} />
+        <CartProvider>
+             <RouterProvider router={router} />
+        </CartProvider>
+           
         </>
     )
 }

@@ -1,10 +1,24 @@
-import { useState,useEffect } from "react"
+import { useState,useEffect,useRef } from "react"
 
 function useCircles(brandId,filters = {}){
 
     const [Call,setCall]=useState(null);
+     const [syrax,setsyrax]=useState([]);
+
+       
+        const previousFilters = useRef();
 
     useEffect(()=>{
+
+
+        const currentFiltersStr = JSON.stringify(filters);
+    const prevFiltersStr = JSON.stringify(previousFilters.current);
+
+    if (brandId && currentFiltersStr === prevFiltersStr) {
+      return; 
+    }
+
+    previousFilters.current = filters;
 
         if(!brandId) {
              console.log("⚠️ No brandId passed to useCircles");
@@ -24,9 +38,17 @@ function useCircles(brandId,filters = {}){
             
              console.log(opcode);
 
-             const longclaw=opcode.response.products || [];
+             const longclaw=opcode.response?.products || [];
 
              setCall(longclaw);
+
+             const vermithor=opcode.response?.meta_data || [];
+
+             if (vermithor?.h1_tag && !Array.isArray(vermithor.h1_tag)) {
+            vermithor.h1_tag = [vermithor.h1_tag];
+      }
+
+             setsyrax(vermithor);
            
      
         }
@@ -35,6 +57,6 @@ function useCircles(brandId,filters = {}){
     },[brandId,JSON.stringify(filters)]);
 
 
-    return Call;
+    return [Call,syrax];
 }
 export default useCircles;

@@ -17,13 +17,25 @@ function Circle(){
   });
 
 
-    const Call=useCircles(brandId,filters);
+    const [Call,syrax]=useCircles(brandId,filters);
 
     if (!brandId || !Call) {
     return <div>Loading brands...</div>;
   }
     return(
         <div>
+
+
+           {
+  syrax?.h1_tag?.length > 0 && (
+    <div className="ml-12 mt-4">
+      {syrax.h1_tag.map((strong, index) => (
+        <p key={index} className="text-[22px] font-bold mt-3 text-gray-900">{strong}</p>
+      ))}
+    </div>
+  )
+}
+
             <div className="ml-12 mr-15 flex flex-wrap mt-20 justify-center gap-7">
                 {
                     Call.map((atom,idx)=>(

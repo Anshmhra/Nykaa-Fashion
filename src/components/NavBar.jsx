@@ -11,10 +11,12 @@ import { TbMathGreater } from "react-icons/tb";
 import { IoSaveOutline } from "react-icons/io5";
 
 import { FaRegHeart } from "react-icons/fa";
+import { CartProvider, useCart } from "../Context/CartContext";
 
 function NavBar(){
 
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const {CartProduct}=useCart();
     return(
         <div>
              
@@ -143,7 +145,7 @@ function NavBar(){
                 <Link to="/wishlist"><FaRegHeart  className="w-10 h-6 mt-5 ml-2"/>
                 <p className="font-semibold  ml-11 -mt-6">Wishlist</p></Link> 
                 <Link to="/cart"><IoBagOutline className="w-10 h-6 mt-5 ml-2"/>
-                <p className="font-semibold ml-10 -mt-6">Cart</p></Link>
+                <p className="font-semibold ml-10 -mt-6">Cart-{CartProduct.length}</p></Link>
 
                 
                 </div>

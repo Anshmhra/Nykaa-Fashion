@@ -3,6 +3,7 @@ import { useState,useEffect } from "react"
 function useCards(categoryID){
 
     const [Detail,setDetail]=useState([]);
+    const [header,setHeader]=useState([]);
    
 
 
@@ -22,6 +23,11 @@ function useCards(categoryID){
             const teho=(data?.response?.products || []);
 
            setDetail(teho);
+          const head=(data?.response?.meta_data || []);
+          if (head?.h1_tag && !Array.isArray(head.h1_tag)) {
+        head.h1_tag = [head.h1_tag];
+      }
+          setHeader(head);
            console.log(data);
 
         })
@@ -32,7 +38,7 @@ function useCards(categoryID){
 
 
 
-    return Detail;
+    return [Detail,header];
 }
 export  default useCards;
 

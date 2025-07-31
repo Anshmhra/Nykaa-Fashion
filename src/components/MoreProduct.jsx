@@ -11,8 +11,22 @@ function MoreProduct(){
      const atom = location.state?.itemData;
      if (!atom) return <div>No product data found.</div>;
     return(
-       <div className="max-w-6xl mx-auto p-8 mt-10 shadow-lg rounded-xl bg-white">
+       <div className="max-w-7xl mx-auto p-8 mt-10 shadow-lg rounded-xl bg-white">
              <div className="flex flex-col md:flex-row gap-10">
+
+              
+        <div className="overflow-y-auto scrollbar-hide h-90 scrollbar-thin scrollbar-thumb-transparent scrollbar-track-transparent">
+          {
+            atom.plp_pdp_bridge?.images?.map((sideView,dude)=>(
+            
+              <div className="" key={dude}>
+              <img src={sideView.url}
+              alt={dude}
+              className="w-30 h-38 mt-3 hover:cursor-pointer"
+              /></div>
+            ))
+          }
+        </div> 
              
                <div className="flex-1">
                  <img

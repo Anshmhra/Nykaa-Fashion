@@ -2,16 +2,36 @@ import { useLocation } from "react-router-dom";
 import { MdCurrencyRupee } from "react-icons/md";
 import { useState } from "react";
 import { RiHeartAddLine } from "react-icons/ri";
+import { useCart } from "../Context/CartContext";
 function Product(){
     const location = useLocation();
     const [selectedColor, setSelectedColor] = useState(null);
     const [selectedSize, setSelectedSize] = useState(null);
 
+    const {addToCart}=useCart();
+
      const item = location.state?.itemData;
      if (!item) return <div>No product data found.</div>;
     return(
-         <div className="max-w-6xl mx-auto p-8 mt-10 shadow-lg rounded-xl bg-white">
-      <div className="flex flex-col md:flex-row gap-10">
+         <div className="max-w-7xl mx-auto p-8 mt-10 shadow-lg rounded-xl bg-white">
+
+       
+
+      <div className="flex flex-col md:flex-row gap-8">
+ 
+        <div className="overflow-y-auto scrollbar-hide h-90 scrollbar-thin scrollbar-thumb-transparent scrollbar-track-transparent">
+          {
+            item.plp_pdp_bridge?.images?.map((sideView,dude)=>(
+            
+              <div className="" key={dude}>
+              <img src={sideView.url}
+              alt={dude}
+              className="w-30 h-38 mt-3 hover:cursor-pointer"
+              /></div>
+            ))
+          }
+        </div> 
+
       
         <div className="flex-1">
           <img
@@ -84,7 +104,7 @@ function Product(){
         
          {item.sizeVariation?.length > 0 &&(
             <div>
-              <div className="flex justify-between items-center mb-2">
+              <div className="flex gap-80 items-center mb-2">
             <p className="font-semibold text-lg">Select Size</p>
             <p className="text-pink-600 font-medium cursor-pointer text-sm">
               Size Guide
@@ -104,7 +124,7 @@ function Product(){
                 ${
                selectedSize === size.title
                ? "bg-pink-500 text-white border-pink-500"
-               : "hover:bg-gray-200 text-gray-800 border-gray-300"
+               : "hover:bg-gray-200 text-gray-800 border-gray-300  "
                }`}
                >
                 {size.title}
@@ -118,7 +138,9 @@ function Product(){
          )}
 
         <RiHeartAddLine className=" absolute ml-40 mt-14 w-8 h-6"/> <button className="text-[18px] font-semibold mt-10  w-100 h-15 border  rounded-2xl relative ml-15">Add to Wishist</button>
-        <button className="text-[18px] font-semibold mt-10  w-100 h-15 border  rounded-2xl relative ml-15 bg-black text-white">Add to Bag</button>
+        <button onClick={()=>addToCart({...item,selectedSize:selectedSize ,selectedColor})}className="text-[18px] font-semibold mt-10  w-100 h-15 border  rounded-2xl relative ml-15 bg-black text-white hover:cursor-pointer hover:scale-95 duration-300 hover:text-pink-500">
+          Add to Bag
+          </button>
         
         
         
