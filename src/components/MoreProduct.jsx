@@ -2,11 +2,14 @@ import { useLocation } from "react-router-dom";
 import { useState } from "react";
 import { RiHeartAddLine } from "react-icons/ri";
 import { MdCurrencyRupee } from "react-icons/md";
+import { useCart } from "../Context/CartContext";
 function MoreProduct(){
 
     const location = useLocation();
     const [selectedColor, setSelectedColor] = useState(null);
     const [selectedSize, setSelectedSize] = useState(null);
+
+    const {addToCart}=useCart();
 
      const atom = location.state?.itemData;
      if (!atom) return <div>No product data found.</div>;
@@ -133,7 +136,7 @@ function MoreProduct(){
                 )}
        
                <RiHeartAddLine className=" absolute ml-40 mt-14 w-8 h-6"/> <button className="text-[18px] font-semibold mt-10  w-100 h-15 border  rounded-2xl relative ml-15">Add to Wishist</button>
-               <button className="text-[18px] font-semibold mt-10  w-100 h-15 border  rounded-2xl relative ml-15 bg-black text-white">Add to Bag</button>
+               <button onClick={()=>addToCart({...atom,selectedSize:selectedSize ,selectedColor})} className="text-[18px] font-semibold mt-10  w-100 h-15 border  rounded-2xl relative ml-15 bg-black text-white hover:cursor-pointer hover:scale-95 duration-300 hover:text-pink-500">Add to Bag</button>
                
                
                

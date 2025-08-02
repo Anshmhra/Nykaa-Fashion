@@ -5,6 +5,8 @@ import './index.css'
 import App from './App.jsx'
 import {createBrowserRouter,RouterProvider,} from "react-router-dom";
 import { CartProvider } from './Context/CartContext.jsx';
+import { ProductCacheProvider } from './Context/SearchContext.jsx';
+
 
 
 
@@ -26,7 +28,8 @@ function Main(){
       const Render=lazy(()=>import("./components/Rendring.jsx"));
       const Circle=lazy(()=>import("./components/Circle.jsx"));
       const Product=lazy(()=>import("./components/product.jsx"));
-      const MoreProduct=lazy(()=>import("./components/MoreProduct.jsx"))
+      const MoreProduct=lazy(()=>import("./components/MoreProduct.jsx"));
+      const SearchProduct=lazy(()=>import("./components/SearchProduct.jsx"));
       
 
 
@@ -87,6 +90,13 @@ function Main(){
                         <MoreProduct/>
                          </Suspense>
 
+                    },
+                     {
+                        path:"searchProduct",
+                        element:<Suspense fallback={<div>Loading Home...</div>}>
+                        <SearchProduct/>
+                         </Suspense>
+
                     }
                 ]
 
@@ -94,9 +104,12 @@ function Main(){
 
     return(
         <>
-        <CartProvider>
+        <ProductCacheProvider>
+            <CartProvider>
              <RouterProvider router={router} />
-        </CartProvider>
+            </CartProvider>
+        </ProductCacheProvider>
+       
            
         </>
     )
