@@ -47,7 +47,7 @@ function NavBar() {
       </div>
 
       <div className="flex h-18 content-center shadow border-b-gray-400">
-        {/* Side Menu */}
+    
         <div className="relative z-50">
           {!isMenuOpen && (
             <div
@@ -61,20 +61,20 @@ function NavBar() {
           {isMenuOpen && (
             <div className="fixed top-0 left-0 w-64 h-full bg-white z-40 shadow-md">
               <div className="flex items-center justify-between p-4 border-b">
-                <div className="flex items-center gap-2">
+                <Link to="account" className="flex items-center gap-2">
                   <FaUserCircle size={20} />
                   <span className="font-semibold">Login</span>
-                </div>
+                </Link>
                 <FaTimes
                   className="cursor-pointer"
                   onClick={() => setIsMenuOpen(false)}
                 />
               </div>
               <ul className="p-4 font-semibold space-y-3 text-gray-700">
-                <li className="hover:bg-gray-100 p-2 rounded cursor-pointer">Home</li>
-                <li className="hover:bg-gray-100 p-2 rounded cursor-pointer">Your Orders</li>
-                <li className="hover:bg-gray-100 p-2 rounded cursor-pointer">Your Wishlist</li>
-                <li className="hover:bg-gray-100 p-2 rounded cursor-pointer">Your Cartlist</li>
+                <Link to="/" className="hover:bg-gray-100 p-2 rounded cursor-pointer"><p>Home</p></Link>
+                <Link to=""className="hover:bg-gray-100 p-2 rounded cursor-pointer"><p>Your Orders</p></Link>
+                <Link to="wishlist" className="hover:bg-gray-100 p-2 rounded cursor-pointer"><p>Your Wishlist</p></Link>
+                <Link to="cart"className="hover:bg-gray-100 p-2 rounded cursor-pointer"><p>Your Cartlist</p></Link>
                 <li className="hover:bg-gray-100 p-2 rounded cursor-pointer">About Us</li>
                 <li className="hover:bg-gray-100 p-2 rounded cursor-pointer">Contact Us</li>
                 <li className="hover:bg-gray-100 p-2 rounded cursor-pointer">Help!</li>
@@ -83,7 +83,6 @@ function NavBar() {
           )}
         </div>
 
-        {/* Logo */}
         <Link to="/">
           <img
             src="https://images-static.nykaa.com/fashion-images/pub/media/logo-full.svg"
@@ -91,7 +90,7 @@ function NavBar() {
           />
         </Link>
 
-        {/* Categories */}
+      
         <ul className="flex gap-4 font-bold ml-6 mt-6">
           <Link to={`/circle?brandId=6557`}><li className="hover:text-pink-600">Women</li></Link>
           <Link to={`/circle?brandId=6823`}><li className="hover:text-pink-600">Men</li></Link>
@@ -117,7 +116,7 @@ function NavBar() {
           </div>
         </ul>
 
-        {/* Search Bar */}
+
         <div className="relative">
           <div className="flex items-center bg-gray-100 rounded-md px-3 h-12 mt-4 ml-5 w-[22rem] shadow">
             <IoMdSearch className="text-gray-600 w-5 h-5" />
@@ -158,25 +157,31 @@ function NavBar() {
           )}
         </div>
 
-        {/* Auth + Cart + Wishlist */}
+    
         <button className="w-20 h-10 bg-pink-600 mt-4 ml-3 rounded-2xl text-white font-semibold">Sign in</button>
-        <div className="relative group">
-          <Link to="">
-            <RiAccountCircleLine className="w-10 h-7 mt-5 ml-2" />
-            <p className="font-semibold ml-11 -mt-7">Account</p>
-          </Link>
-          <div className="absolute ml-230 top-20 left-0 bg-white w-48 p-4 shadow-xl rounded-md hidden group-hover:flex gap-4 z-50">
-            <div className="ml-2 text-[12px] mr-3 text-left">
-              <p>Becoming a Nykaa Fashion member comes with easy order tracking, rewards, offers and more.</p>
-              <Link to={"/account"}>
-                <p className="text-pink-600 mt-3 font-semibold text-[14px]">Login/Signup Now</p>
-                <TbMathGreater className="ml-31 -mt-4 text-pink-500 font-semibold" />
-              </Link>
-              <p className="text-gray-500 font-semibold text-[14px] mt-4">Orders</p>
-              <IoSaveOutline className="ml-31 -mt-4" />
-            </div>
-          </div>
-        </div>
+       <div className="relative group cursor-pointer mt-4 ml-4">
+  <div className="flex flex-col items-center">
+    <RiAccountCircleLine className="w-7 h-7 -ml-16 mt-1" />
+    <p className="font-semibold  ml-7 -mt-7">Account</p>
+  </div>
+
+  <div className="absolute top-full right-0 mt-3 bg-white w-64 p-4 shadow-xl rounded-md z-50 hidden group-hover:block text-left">
+    <p className="text-[12px] text-gray-700 leading-5">
+      Becoming a Nykaa Fashion member comes with easy order tracking, rewards, offers and more.
+    </p>
+
+    <Link to="/account" className="flex items-center mt-3 text-pink-600 font-semibold text-[14px] hover:underline">
+      Login/Signup Now
+      <TbMathGreater className="ml-1 text-pink-500" />
+    </Link>
+
+    <div className="mt-4 flex items-center gap-2">
+      <IoSaveOutline className="text-gray-600" />
+      <p className="text-gray-700 font-semibold text-[14px]">Orders</p>
+    </div>
+  </div>
+</div>
+
 
         <Link to="/wishlist">
           <FaRegHeart className="w-10 h-6 mt-5 ml-2" />
@@ -184,8 +189,8 @@ function NavBar() {
         </Link>
 
         <Link to="/cart">
-          <IoBagOutline className="w-10 h-6 mt-5 ml-2" />
-          <p className="font-semibold ml-10 -mt-6">Cart-{CartProduct.length}</p>
+          <IoBagOutline className="w-10 h-6 mt-5 ml-2 relative" />
+          <p className="font-semibold ml-10 -mt-6">Cart<div className="-mt-9 absoulte ml-7 overflow-hidden  bg-red-800 text-amber-50 w-6  h-6 p-1 rounded-full flex justify-center align-middle">{CartProduct.length}</div></p>
         </Link>
       </div>
     </div>
