@@ -13,6 +13,8 @@ import { useProductCache } from "../Context/SearchContext";
 import debounce from "lodash.debounce";
 import searchProduct from "./SearchProduct";
 
+
+
 function NavBar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { CartProduct } = useCart();
@@ -183,15 +185,23 @@ function NavBar() {
 </div>
 
 
-        <Link to="/wishlist">
-          <FaRegHeart className="w-10 h-6 mt-5 ml-2" />
-          <p className="font-semibold ml-11 -mt-6">Wishlist</p>
-        </Link>
+       <Link to="wishlist" className="hover:bg-gray-100 p-2 rounded cursor-pointer  font-semibold ml-10 mt-4 gap-1 flex">
+     < FaRegHeart className="-ml-7 m w-6 h-5"/> 
+  Wishlist
+</Link>
 
-        <Link to="/cart">
-          <IoBagOutline className="w-10 h-6 mt-5 ml-2 relative" />
-          <p className="font-semibold ml-10 -mt-6">Cart<div className="-mt-9 absoulte ml-7 overflow-hidden  bg-red-800 text-amber-50 w-6  h-6 p-1 rounded-full flex justify-center align-middle">{CartProduct.length}</div></p>
-        </Link>
+
+       <Link to="/cart" className="relative ml-2  flex items-center gap-1">
+  <IoBagOutline className="w-10 h-6 -mt-3" />
+  <span className="font-semibold">Cart</span>
+
+  {CartProduct.length > 0 && (
+    <div className="absolute -top-2 left-7 bg-red-800 text-amber-50 w-5 h-5 text-xs font-bold rounded-full flex justify-center items-center">
+      {CartProduct.length}
+    </div>
+  )}
+</Link>
+
       </div>
     </div>
   );

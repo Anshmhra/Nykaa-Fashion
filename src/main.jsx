@@ -6,6 +6,7 @@ import App from './App.jsx'
 import {createBrowserRouter,RouterProvider,} from "react-router-dom";
 import { CartProvider } from './Context/CartContext.jsx';
 import { ProductCacheProvider } from './Context/SearchContext.jsx';
+import { WishlistProvider } from './Context/WishlistContext.jsx'; 
 
 
 
@@ -106,7 +107,9 @@ function Main(){
         <>
         <ProductCacheProvider>
             <CartProvider>
+                  <WishlistProvider>
              <RouterProvider router={router} />
+                  </WishlistProvider>
             </CartProvider>
         </ProductCacheProvider>
        

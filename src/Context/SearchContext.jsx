@@ -9,7 +9,7 @@ export const ProductCacheProvider = ({ children }) => {
 
   const addProductsToCache = (brandId, newProducts = []) => {
     if (!Array.isArray(newProducts)) {
-      console.warn("⚠️ newProducts is not an array:", newProducts);
+      console.warn(" newProducts is not an array:", newProducts);
       return;
     }
 
