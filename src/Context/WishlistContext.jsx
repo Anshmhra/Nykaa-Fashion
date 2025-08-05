@@ -1,4 +1,4 @@
-import { createContext ,useContext,useState } from "react";
+import { createContext, useContext, useState } from "react";
 
 const WishlistContext = createContext();
 
@@ -6,14 +6,30 @@ export function WishlistProvider({ children }) {
   const [wishItems, setWishItems] = useState([]);
 
   function addToWishList(product) {
-    const exists = wishItems.some((item) => item.id === product.id);
+    const exists = wishItems.some(
+      (item) =>
+        item.id === product.id &&
+        item.selectedSize === product.selectedSize &&
+        item.selectedColor === product.selectedColor
+    );
+
     if (!exists) {
       setWishItems((prev) => [...prev, product]);
     }
   }
 
-  function removeFromWishlist(id) {
-    setWishItems((prev) => prev.filter((item) => item.id !== id));
+  
+  function removeFromWishlist(product) {
+    setWishItems((prev) =>
+      prev.filter(
+        (item) =>
+          !(
+            item.id === product.id &&
+            item.selectedSize === product.selectedSize &&
+            item.selectedColor === product.selectedColor
+          )
+      )
+    );
   }
 
   return (

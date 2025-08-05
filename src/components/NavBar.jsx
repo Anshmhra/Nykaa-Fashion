@@ -191,12 +191,12 @@ function NavBar() {
 </Link>
 
 
-       <Link to="/cart" className="relative ml-2  flex items-center gap-1">
+       <Link to="/cart" className="relative ml-2  flex items-center ">
   <IoBagOutline className="w-10 h-6 -mt-3" />
-  <span className="font-semibold">Cart</span>
+  <span className="font-semibold -mt-1">Cart</span>
 
   {CartProduct.length > 0 && (
-    <div className="absolute -top-2 left-7 bg-red-800 text-amber-50 w-5 h-5 text-xs font-bold rounded-full flex justify-center items-center">
+    <div className="absolute -top-2 left-7 bg-red-800 text-amber-50 w-5 h-5 text-xs font-bold rounded-full flex justify-center items-center mt-4 ml-9 -">
       {CartProduct.length}
     </div>
   )}

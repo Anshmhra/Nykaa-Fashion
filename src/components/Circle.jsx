@@ -1,17 +1,18 @@
-import { useEffect,useMemo } from "react";
-import { useSearchParams, Link ,useLocation} from "react-router-dom";
+import { useEffect, useMemo } from "react";
+import { useSearchParams, Link, useLocation } from "react-router-dom";
 import { MdCurrencyRupee } from "react-icons/md";
 import useCircles from "../Hooks/UseCircles";
 import { useProductCache } from "../Context/SearchContext";
+import { CiHeart } from "react-icons/ci";
+import { useWishlist } from "../Context/WishlistContext";
 
 function Circle() {
   const [searchParams] = useSearchParams();
   const brandId = searchParams.get("brandId");
-  
-const location = useLocation();
+  const { wishItems, addToWishList, removeFromWishlist } = useWishlist();
+  const location = useLocation();
 
-  
-const filters = useMemo(() => {
+  const filters = useMemo(() => {
     const obj = {};
     for (const [key, value] of searchParams.entries()) {
       if (key.endsWith("_filter")) {
@@ -21,13 +22,12 @@ const filters = useMemo(() => {
     return obj;
   }, [searchParams]);
 
-  const [Call, syrax] = useCircles(brandId,filters); 
+  const [Call, syrax] = useCircles(brandId, filters);
   const { cachedProducts = [], addProductsToCache } = useProductCache();
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [location]);
-
 
   useEffect(() => {
     if (Call?.length > 0) {
@@ -37,20 +37,20 @@ const filters = useMemo(() => {
 
   const isLoading = !Call || Call.length === 0;
 
-if (!brandId || isLoading) {
-  return <div className="text-center mt-10 text-lg">Loading brands...</div>;
-}
-
-
-const dataToRender = Call;
-
-
-  if (!brandId || dataToRender.length === 0) {
+  if (!brandId || isLoading) {
     return <div className="text-center mt-10 text-lg">Loading brands...</div>;
+  }
+
+  const dataToRender = Call;
+
+  if (dataToRender.length === 0) {
+    return <div className="text-center mt-10 text-lg">No products found.</div>;
   }
 
   return (
     <div key={location.key || location.search}>
+  
+  
       {syrax?.h1_tag?.length > 0 && (
         <div className="ml-12 mt-4">
           {syrax.h1_tag.map((strong, index) => (
@@ -61,22 +61,49 @@ const dataToRender = Call;
         </div>
       )}
 
+ 
       <div className="ml-12 mr-15 flex flex-wrap mt-20 justify-center gap-7">
         {dataToRender.map((atom, idx) =>
           atom?.imageUrl ? (
-            <Link to={"/moreproduct"} key={idx} state={{ itemData: atom }}>
-              <div className="w-[230px] rounded-2xl hover:shadow-2xl object-cover overflow-hidden hover:cursor-pointer hover:scale-95 duration-300 relative">
+            <div
+              key={idx}
+              className="w-[230px] rounded-2xl hover:shadow-2xl object-cover overflow-hidden hover:cursor-pointer hover:scale-95 duration-300 relative"
+            >
+        
+              <div
+                onClick={(e) => {
+                  e.preventDefault();
+                  e.stopPropagation();
+                  const isInWishlist = wishItems.some((w) => w.id === atom.id);
+                  isInWishlist
+                    ? removeFromWishlist(atom.id)
+                    : addToWishList(atom);
+                }}
+                className="absolute top-2 right-2 bg-white rounded-full p-1 shadow-md z-10 cursor-pointer hover:scale-110 transition-transform duration-200"
+              >
+                {wishItems.some((w) => w.id === atom.id) ? (
+                  <CiHeart className="text-pink-600 w-5 h-5 fill-pink-600" />
+                ) : (
+                  <CiHeart className="text-gray-700 w-5 h-5" />
+                )}
+              </div>
+
+        
+              <Link to="/moreproduct" state={{ itemData: atom }}>
                 <img
                   src={atom.imageUrl}
                   alt={idx}
                   className="w-full h-[320px] object-cover rounded"
                 />
+
+           
                 {atom.badge_new?.title && (
                   <div className="object-cover bg-black text-white w-auto text-[14px] ml-3 rounded -mt-7 overflow-hidden absolute">
                     <p className="ml-1 mr-1">{atom.badge_new.title}</p>
                   </div>
                 )}
 
+            
                 <div className="flex gap-1 text-[13px]">
                   {atom?.tag?.[0]?.title && (
                     <div className="p-2 rounded text-center mt-1 -ml-1 bg-blue-100">
@@ -95,19 +122,20 @@ const dataToRender = Call;
                   {atom.subTitle}
                 </p>
 
+             
                 <div className="flex gap-2 ml-1">
                   <div className="ml-2 mt-1 flex flex-col gap-1">
+                
+
                     {atom?.sibling_colour_codes?.length > 0 && (
                       <div className="flex gap-1 mt-1 items-center">
-                        {atom.sibling_colour_codes
-                          .slice(0, 4)
-                          .map((color, Id) => (
-                            <div
-                              key={Id}
-                              className="w-4 h-4 rounded-full border border-gray-300"
-                              style={{ backgroundColor: color }}
-                            ></div>
-                          ))}
+                        {atom.sibling_colour_codes.slice(0, 4).map((color, Id) => (
+                          <div
+                            key={Id}
+                            className="w-4 h-4 rounded-full border border-gray-300"
+                            style={{ backgroundColor: color }}
+                          ></div>
+                        ))}
                         {atom?.sibling_colour_codes?.length > 4 && (
                           <span className="text-xs text-gray-500">
                             +{atom.sibling_colour_codes.length - 4} more
@@ -116,6 +144,7 @@ const dataToRender = Call;
                       </div>
                     )}
 
+                 
                     <div className="flex gap-2 ml-1 mt-1 items-center">
                       <MdCurrencyRupee className="-ml-1 text-gray-700" />
                       <p className="-ml-2 text-gray-800">{atom.discountedPrice}</p>
@@ -127,8 +156,8 @@ const dataToRender = Call;
                     </div>
                   </div>
                 </div>
-              </div>
-            </Link>
+              </Link>
+            </div>
           ) : null
         )}
       </div>

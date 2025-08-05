@@ -3,12 +3,14 @@ import { MdCurrencyRupee } from "react-icons/md";
 import { useState } from "react";
 import { RiHeartAddLine } from "react-icons/ri";
 import { useCart } from "../Context/CartContext";
+import { useWishlist } from "../Context/WishlistContext";
 function Product(){
     const location = useLocation();
     const [selectedColor, setSelectedColor] = useState(null);
     const [selectedSize, setSelectedSize] = useState(null);
 
     const {addToCart}=useCart();
+     const { wishItems, addToWishList,removeFromWishlist  } = useWishlist();
 
      const item = location.state?.itemData;
      if (!item) return <div>No product data found.</div>;
@@ -137,7 +139,10 @@ function Product(){
 
          )}
 
-        <RiHeartAddLine className=" absolute ml-40 mt-14 w-8 h-6"/> <button className="text-[18px] font-semibold mt-10  w-100 h-15 border  rounded-2xl relative ml-15">Add to Wishist</button>
+        <RiHeartAddLine className=" absolute ml-40 mt-14 w-8 h-6 hover:bg-pink-700"/> <button onClick={()=>addToWishList({...item,selectedColor,selectedSize})}className="text-[18px] font-semibold mt-10  w-100 h-15 border  rounded-2xl relative ml-15 hover:cursor-pointer hover:scale-95 duration-300 hover:text-pink-500">Add to Wishist</button>
+        
+        
+        
         <button onClick={()=>addToCart({...item,selectedSize:selectedSize ,selectedColor})}className="text-[18px] font-semibold mt-10  w-100 h-15 border  rounded-2xl relative ml-15 bg-black text-white hover:cursor-pointer hover:scale-95 duration-300 hover:text-pink-500">
           Add to Bag
           </button>

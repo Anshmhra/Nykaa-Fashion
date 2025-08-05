@@ -1,6 +1,11 @@
+
+import { FaInstagram } from "react-icons/fa6";
+import { FaLinkedin } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
+import { Link } from "react-router-dom";
 function Footer(){
     return(
-        <div className="w-full h-60 bg-gray-800 mt-4 text-white  ">
+        <div className="w-full h-60 bg-neutral-700 mt-4 text-white  ">
             <div >
 
                    <div className="text-white ml-25 p-12 ">
@@ -12,8 +17,11 @@ function Footer(){
                 </div>
                     <p className="ml-35 -mt-15">_________________________</p>
                 <div className="ml-190 -mt-20">
-                <p className="text=[24px]">FOR ANY HELP, YOU MAY CALL US AT</p>
-                <p>1800-xxx-4444</p>
+                <p className="text=[24px]">FOR ANY HELP, YOU MAY Connect WITH ME</p>
+                  <Link to={"https://www.instagram.com/ansh_mehra19/"}><FaInstagram className="mt-2 ml-5"/></Link>
+                  <Link to={"https://www.linkedin.com/in/ansh-mehra-2916312b1/"}><FaLinkedin  className="ml-12 -mt-4"/></Link>
+                  <Link to={"https://github.com/Anshmhra"}><FaGithub className="ml-19 -mt-4"/></Link>
+
                 <p className="mt-4">Monday to Saturday, 8AM to 10PM and Sunday, 10AM to 7PM</p>
                 </div>
 
