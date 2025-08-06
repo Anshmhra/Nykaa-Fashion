@@ -1,8 +1,4 @@
-// HorizonatalCarousel.jsx
-import AspectRatio from '@mui/joy/AspectRatio';
-import Box from '@mui/joy/Box';
-import Typography from '@mui/joy/Typography';
-import Card from '@mui/joy/Card';
+import { Box, Typography } from '@mui/joy';
 
 const data = [
   {
@@ -56,40 +52,50 @@ export default function HorizonatalCarousel({ handleImageClick }) {
   return (
     <Box
       sx={{
-        display: "flex",
-        gap: 1,
-        py: 1,
-        overflow: "auto",
-        width: "100%",
+        display: 'flex',
+        gap: 2,
+        py: 2,
+        overflowX: 'auto',
+        px: 4,
+        marginLeft:6,
+        marginRight:6,
         scrollSnapType: 'x mandatory',
-        '&>*': {
-          scrollSnapAlign: 'center',
+        '& > *': {
+          scrollSnapAlign: 'start',
         },
         '::-webkit-scrollbar': { display: 'none' },
       }}
     >
-      {
-        data.map((item, index) => (
-          <Card
-            orientation="horizontal"
-            size="sm"
-            key={index}
-            variant="outlined"
-            onClick={() => handleImageClick(item.id, `/rendring?categoryId=${item.id}`)}
-            sx={{ cursor: 'pointer' }}
-          >
-            <AspectRatio ratio="1" sx={{ minWidth: 120 }}>
-              <img
-                src={`${item.src}`}
-                alt={item.title}
-              />
-            </AspectRatio>
-            <Box sx={{ whiteSpace: 'nowrap', mx: 1 }}>
-              <Typography level="title-sm">{item.title}</Typography>
-            </Box>
-          </Card>
-        ))
-      }
+      {data.map((item, index) => (
+        <Box
+          key={index}
+          onClick={() => handleImageClick(item.id, `/rendring?categoryId=${item.id}`)}
+          sx={{
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            cursor: 'pointer',
+            minWidth: 145, 
+          
+          }}
+        >
+          <Box
+            component="img"
+            src={item.src}
+            alt={item.title}
+            sx={{
+              width: 120,      
+              height: 120,
+              borderRadius: '50%',
+              objectFit: 'cover',
+
+            }}
+          />
+          <Typography level="body-sm" sx={{ mt: 1, textAlign: 'center' }}>
+            {item.title}
+          </Typography>
+        </Box>
+      ))}
     </Box>
   );
 }

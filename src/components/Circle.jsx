@@ -104,7 +104,7 @@ function Circle() {
                 )}
 
             
-                <div className="flex gap-1 text-[13px]">
+                <div className="flex gap-1 text-[13px] ml-2 ">
                   {atom?.tag?.[0]?.title && (
                     <div className="p-2 rounded text-center mt-1 -ml-1 bg-blue-100">
                       <p>{atom.tag[0].title}</p>

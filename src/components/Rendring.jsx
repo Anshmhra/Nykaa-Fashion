@@ -73,7 +73,7 @@ function Rendring() {
               </div>
 
           
-              <div className="flex gap-1 text-[13px] mt-2">
+              <div className="flex gap-1 text-[13px] mt-2 ml-1">
                 {item?.tag?.slice(0, 2).map((tagObj, i) => (
                   <div
                     key={i}
@@ -85,14 +85,14 @@ function Rendring() {
               </div>
 
              
-              <p className="text-[15px] font-semibold mt-2">{item.title}</p>
-              <p className="text-[14px] text-gray-500 truncate max-w-[220px]">
+              <p className="text-[15px] font-semibold mt-2 ml-1">{item.title}</p>
+              <p className="text-[14px] text-gray-500 truncate max-w-[220px] ml-1">
                 {item.subTitle}
               </p>
 
             
               {item?.sibling_colour_codes?.length > 0 && (
-                <div className="flex gap-1 mt-2 items-center">
+                <div className="flex gap-1 mt-2 items-center ml-1">
                   {item.sibling_colour_codes.slice(0, 4).map((color, colorIdx) => (
                     <div
                       key={colorIdx}
@@ -109,7 +109,7 @@ function Rendring() {
               )}
 
             
-              <div className="flex gap-2 mt-2 items-center">
+              <div className="flex gap-2 mt-2 items-center ml-1">
                 <MdCurrencyRupee className="text-gray-700" />
                 <p className="-ml-2 text-gray-800">{item.discountedPrice}</p>
                 <MdCurrencyRupee className="text-[14px] text-gray-500" />
@@ -121,7 +121,7 @@ function Rendring() {
 
            
               {item.dynamic_text?.title && (
-                <p className="text-[14px] text-emerald-600 ">
+                <p className="text-[14px] text-emerald-600 ml-2">
                   {item.dynamic_text.title}
                 </p>
               )}
