@@ -37,7 +37,7 @@ function NavBar() {
 
   return (
     <div>
-      <div className="bg-black h-8 text-white w-338 sm:-ml-120">
+      <div className="bg-black h-8 text-white w-338 ">
         <nav>
           <ul className="flex justify-end gap-6 mr-20">
             <MdPhoneAndroid className="mt-1" />
