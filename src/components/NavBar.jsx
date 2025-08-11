@@ -37,7 +37,7 @@ function NavBar() {
 
   return (
     <div>
-      <div className="bg-black h-8 text-white w-338">
+      <div className="bg-black h-8 text-white w-338 ">
         <nav>
           <ul className="flex justify-end gap-6 mr-20">
             <MdPhoneAndroid className="mt-1" />
@@ -48,7 +48,7 @@ function NavBar() {
         </nav>
       </div>
 
-      <div className="flex h-18 content-center shadow border-b-gray-400">
+      <div className="flex h-18 content-center shadow border-b-gray-400 ">
     
         <div className="relative z-50">
           {!isMenuOpen && (
@@ -56,7 +56,7 @@ function NavBar() {
               onClick={() => setIsMenuOpen(true)}
               className="absolute top-3 left-4 cursor-pointer"
             >
-              <FaBars size={22} />
+              <FaBars size={22} className="ml-8"/>
             </div>
           )}
 
@@ -88,12 +88,12 @@ function NavBar() {
         <Link to="/">
           <img
             src="https://images-static.nykaa.com/fashion-images/pub/media/logo-full.svg"
-            className="w-25 hover:text-white h-17 ml-17 rounded-4xl hover:cursor-pointer"
+            className="w-25 hover:text-white h-17 ml-24 rounded-4xl hover:cursor-pointer "
           />
         </Link>
 
       
-        <ul className="flex gap-4 font-bold ml-6 mt-6">
+        <ul className="flex gap-6 font-bold ml-8 mt-6">
           <Link to={`/circle?brandId=6557`}><li className="hover:text-pink-600">Women</li></Link>
           <Link to={`/circle?brandId=6823`}><li className="hover:text-pink-600">Men</li></Link>
           <Link to={`/circle?brandId=6266`}><li className="hover:text-pink-600">Kids</li></Link>
@@ -160,8 +160,8 @@ function NavBar() {
         </div>
 
     
-        <button className="w-20 h-10 bg-pink-600 mt-4 ml-3 rounded-2xl text-white font-semibold">Sign in</button>
-       <div className="relative group cursor-pointer mt-4 ml-4">
+       
+       <div className="relative group cursor-pointer mt-4 ml-8">
   <div className="flex flex-col items-center">
     <RiAccountCircleLine className="w-7 h-7 -ml-16 mt-1" />
     <p className="font-semibold  ml-7 -mt-7">Account</p>
