@@ -167,7 +167,7 @@ const handleImageClick = async (id, urlPath) => {
     <div
       key={card.id}
       onClick={() => handleImageClick(card.id, `/rendring?categoryId=${card.id}`)}
-      className="inline-block  pointer-events-auto relative z-10"
+      className="relative z-[9999] pointer-events-auto cursor-pointer inline-block"
       style={{ pointerEvents: "auto" }}
     >
       <img
