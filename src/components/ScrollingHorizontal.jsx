@@ -75,7 +75,7 @@ export default function HorizonatalCarousel({ handleImageClick }) {
             flexDirection: 'column',
             alignItems: 'center',
             cursor: 'pointer',
-            minWidth: 145, 
+            minWidth: { md: 145, xs: 90 }, 
           
           }}
         >
@@ -84,8 +84,8 @@ export default function HorizonatalCarousel({ handleImageClick }) {
             src={item.src}
             alt={item.title}
             sx={{
-              width: {md:120,xs:80} ,     
-              height: {md:120,xs:80},
+              width: {md:120,xs:70} ,     
+              height: {md:120,xs:70},
               borderRadius: '50%',
               objectFit: 'cover',
 
