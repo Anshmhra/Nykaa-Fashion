@@ -151,49 +151,49 @@ const handleImageClick = async (id, urlPath) => {
                 </div>
 
                 <div className="grid grid-cols-2 lg:grid-cols-5 gap-1  gap-x-1 ml-2 lg:ml-[56px] mt-7 mr-2 lg:mr-8 ">
-                    <div onClick={()=>handleImageClick(4495,`/rendring?categoryId=4495`) } className="inline-block cursor-pointer relative z-10  touch-none" ><img src="https://images-static.nykaa.com/uploads/4ee71bd4-d592-4667-8a93-821f1bc21e0c.jpg?tr=w-240,cm-pad_resize"
+                    <div onClick={()=>handleImageClick(4495,`/rendring?categoryId=4495`) }  onTouchStart={() => handleImageClick(4495, `/rendring?categoryId=4495`)} className="inline-block cursor-pointer relative z-10 " ><img src="https://images-static.nykaa.com/uploads/4ee71bd4-d592-4667-8a93-821f1bc21e0c.jpg?tr=w-240,cm-pad_resize"
                     className="w-36  h-45 lg:h-72 lg:w-[220px]    "
                     /> <div className="mb-5"><p className="font-semibold">Up to 50% off</p><p className="text-gray-600 w-[140px] truncate sm:w-auto sm:whitespace-normal">Stylish & elegant dresses</p></div>
                     </div>
 
-                     <div onClick={()=>handleImageClick(4240,`/rendring?categoryId=4240`)} className="inline-block cursor-pointer relative z-10  touch-none"  ><img src="https://images-static.nykaa.com/uploads/8139734a-fb9b-40e0-a3a5-270586a7186d.jpg?tr=w-240,cm-pad_resize"
+                     <div onClick={()=>handleImageClick(4240,`/rendring?categoryId=4240`)} className="inline-block cursor-pointer relative z-10"  ><img src="https://images-static.nykaa.com/uploads/8139734a-fb9b-40e0-a3a5-270586a7186d.jpg?tr=w-240,cm-pad_resize"
                     className="w-36 h-45 lg:h-72 lg:w-[220px] hover:cursor-pointer"
                     /><div className="mb-5"><p className="font-semibold hover:cursor-pointer">Up to 70% off</p><p className="text-gray-600 w-[140px] truncate sm:w-auto sm:whitespace-normal">Chic dresses & tops</p></div>
                     </div>
-                     <div onClick={()=>handleImageClick(63680,`/rendring?categoryId=63680`)} className="inline-block cursor-pointer relative z-10  touch-none"   ><img src="https://images-static.nykaa.com/uploads/872c74cd-57b7-42e3-bcd1-473bd22329ba.jpg?tr=w-240,cm-pad_resize"
+                     <div onClick={()=>handleImageClick(63680,`/rendring?categoryId=63680`)} className="inline-block cursor-pointer relative z-10"   ><img src="https://images-static.nykaa.com/uploads/872c74cd-57b7-42e3-bcd1-473bd22329ba.jpg?tr=w-240,cm-pad_resize"
                     className="w-36 h-45 lg:h-72 lg:w-[220px] hover:cursor-pointer"
                     /><div className="mb-5" ><p className="font-semibold hover:cursor-pointer">Min 30% off</p><p className="text-gray-600 hover:cursor-pointer">Stylish ethnicwear</p></div>
  
                     </div>
-                     <div onClick={()=>handleImageClick(4886,`/rendring?categoryId=4886`)} className="inline-block cursor-pointer relative z-10  touch-none"   ><img src="https://images-static.nykaa.com/uploads/a7a3309d-e433-4e2f-847b-63351fe6d9e7.jpg?tr=w-240,cm-pad_resize"
+                     <div onClick={()=>handleImageClick(4886,`/rendring?categoryId=4886`)} className="inline-block cursor-pointer relative z-10"   ><img src="https://images-static.nykaa.com/uploads/a7a3309d-e433-4e2f-847b-63351fe6d9e7.jpg?tr=w-240,cm-pad_resize"
                     className="w-36 h-45 lg:h-72 lg:w-[220px] hover:cursor-pointer"
                     /> <div className="mb-5" ><p className="font-semibold hover:cursor-pointer">Min 40% off</p><p className="text-gray-600 w-[140px] truncate sm:w-auto sm:whitespace-normal">Bestselling activewear</p></div>
                             
                      </div>
-                     <div onClick={()=>handleImageClick(15204,`/rendring?categoryId=15204`)} className="inline-block cursor-pointer relative z-10  touch-none"   ><img src="https://images-static.nykaa.com/uploads/e53da35f-45f8-4bbf-bf07-d7bbab193c3c.jpg?tr=w-240,cm-pad_resize"
+                     <div onClick={()=>handleImageClick(15204,`/rendring?categoryId=15204`)} className="inline-block cursor-pointer relative z-10"   ><img src="https://images-static.nykaa.com/uploads/e53da35f-45f8-4bbf-bf07-d7bbab193c3c.jpg?tr=w-240,cm-pad_resize"
                     className="w-36 h-45 lg:h-72 lg:w-[220px] hover:cursor-pointer"
                     />   <div className="mb-5"><p className="font-semibold hover:cursor-pointer">Up to 60% off</p><p className="text-gray-600 w-[140px] truncate sm:w-auto sm:whitespace-normal">Trendiest global styles</p></div>
              
                      </div>
 
                      
-                     <div onClick={()=>handleImageClick(12071,`/rendring?categoryId=12071`)}className="inline-block cursor-pointer relative z-10  touch-none"   ><img src="https://images-static.nykaa.com/uploads/dfc27d41-6e25-4de7-b3d6-d9a1a9eef168.jpg?tr=w-240,cm-pad_resize"
+                     <div onClick={()=>handleImageClick(12071,`/rendring?categoryId=12071`)}className="inline-block cursor-pointer relative z-10"   ><img src="https://images-static.nykaa.com/uploads/dfc27d41-6e25-4de7-b3d6-d9a1a9eef168.jpg?tr=w-240,cm-pad_resize"
                         className="w-36 h-45 lg:h-72 lg:w-[220px] hover:cursor-pointer"
                         /><div><p className="font-semibold">Up to 25% off</p><p className="text-gray-600 w-[140px] truncate sm:w-auto sm:whitespace-normal">Chic printed co-ords</p></div>
                         </div>
-                        <div onClick={()=>handleImageClick(6559,`/rendring?categoryId=6559`)} className="inline-block cursor-pointer relative z-10  touch-none"  ><img src="https://images-static.nykaa.com/uploads/3f114b5f-13cd-438f-9931-138a12b7fd4f.jpg?tr=w-240,cm-pad_resize"
+                        <div onClick={()=>handleImageClick(6559,`/rendring?categoryId=6559`)} className="inline-block cursor-pointer relative z-10"  ><img src="https://images-static.nykaa.com/uploads/3f114b5f-13cd-438f-9931-138a12b7fd4f.jpg?tr=w-240,cm-pad_resize"
                         className="w-36 h-45 lg:h-72 lg:w-[220px] hover:cursor-pointer"
                         /> <div className="mb-5"><p className="font-semibold hover:cursor-pointer">Up to 50% off</p><p className="text-gray-600 w-[140px] truncate sm:w-auto sm:whitespace-normal">Comfort-first styles</p></div>
                         </div> 
-                         <div onClick={()=>handleImageClick(11674,`/rendring?categoryId=11674`)} className="inline-block cursor-pointer relative z-10  touch-none"  ><img src="https://images-static.nykaa.com/uploads/431d9325-ad4e-4145-8b89-00a70b2785a4.jpg?tr=w-240,cm-pad_resize"
+                         <div onClick={()=>handleImageClick(11674,`/rendring?categoryId=11674`)} className="inline-block cursor-pointer relative z-10"  ><img src="https://images-static.nykaa.com/uploads/431d9325-ad4e-4145-8b89-00a70b2785a4.jpg?tr=w-240,cm-pad_resize"
                         className="w-36 h-45 lg:h-72 lg:w-[220px] hover:cursor-pointer"
                         /> <div className="mb-5"><p className="font-semibold hover:cursor-pointer">Min 30% off</p><p className="text-gray-600">Cool casuals</p></div>
                         </div>
-                         <div onClick={()=>handleImageClick(13161,`/rendring?categoryId=13161`)}className="inline-block cursor-pointer relative z-10  touch-none"   ><img src="https://images-static.nykaa.com/uploads/d5d2453f-16b5-4e32-9fa4-1105e3d246ab.jpg?tr=w-240,cm-pad_resize"
+                         <div onClick={()=>handleImageClick(13161,`/rendring?categoryId=13161`)}className="inline-block cursor-pointer relative z-10"   ><img src="https://images-static.nykaa.com/uploads/d5d2453f-16b5-4e32-9fa4-1105e3d246ab.jpg?tr=w-240,cm-pad_resize"
                         className="w-36 h-45 lg:h-72 lg:w-[220px] hover:cursor-pointer"
                         /> <div className="mb-5"><p className="font-semibold hover:cursor-pointer">Min 50% off</p><p className="text-gray-600 w-[140px] truncate sm:w-auto sm:whitespace-normal">Cute ethnics & casuals</p></div>
                         </div>
-                        <div onClick={()=>handleImageClick(9543,`/rendring?categoryId=9543`)} className="inline-block cursor-pointer relative z-10  touch-none"  ><img src="https://images-static.nykaa.com/uploads/95126df6-b360-476a-b63b-c0ed74c6d6b3.jpg?tr=w-240,cm-pad_resize"
+                        <div onClick={()=>handleImageClick(9543,`/rendring?categoryId=9543`)} className="inline-block cursor-pointer relative z-10"  ><img src="https://images-static.nykaa.com/uploads/95126df6-b360-476a-b63b-c0ed74c6d6b3.jpg?tr=w-240,cm-pad_resize"
                         
                         className="w-36 h-45 lg:h-72 lg:w-[220px] hover:cursor-pointer"
                         /><div className="mb-5"><p className="font-semibold hover:cursor-pointer">Up to 30% off</p><p className="text-gray-600 w-[140px] truncate sm:w-auto sm:whitespace-normal">Aesthetic home decor</p></div>
