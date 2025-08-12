@@ -53,12 +53,12 @@ export default function HorizonatalCarousel({ handleImageClick }) {
     <Box
       sx={{
         display: 'flex',
-        gap: 2,
+        gap: {md:2,xs:0},
         py: 2,
         overflowX: 'auto',
         px: 4,
-        marginLeft:6,
-        marginRight:6,
+        marginLeft:{md:6,xs:-1},
+        marginRight:{md:6,xs:3},
         scrollSnapType: 'x mandatory',
         '& > *': {
           scrollSnapAlign: 'start',
@@ -84,8 +84,8 @@ export default function HorizonatalCarousel({ handleImageClick }) {
             src={item.src}
             alt={item.title}
             sx={{
-              width: 120,      
-              height: 120,
+              width: {md:120,xs:80} ,     
+              height: {md:120,xs:80},
               borderRadius: '50%',
               objectFit: 'cover',
 
