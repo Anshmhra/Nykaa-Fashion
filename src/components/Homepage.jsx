@@ -75,7 +75,7 @@ const handleImageClick = async (id, urlPath) => {
         <div className="ml-1 lg:ml-1">
             
                 <div  onClick={()=>handleImageClick(74296,`/rendring?categoryId=74296`)}><img src="https://images-static.nykaa.com/uploads/e8e8c9be-714d-4464-83ca-3c40be53fe41.jpg?tr=w-1200,cm-pad_resize"
-                className="w-[320px] h-[67px] ml-1 rounded-2xl mt-4 hover:cursor-pointer hover:scale-95 duration-300  lg:w-320 lg:ml-8"
+                className="w-[335px] h-[67px] ml-1 rounded-2xl mt-4 hover:cursor-pointer hover:scale-95 duration-300  lg:w-320 lg:ml-8 lg:h-63"
                 /></div>
                 <div className="ml-12 mt-6">
                 <p className="text-[18px] font-semibold text-gray-500">Our Stores</p>
@@ -145,7 +145,7 @@ const handleImageClick = async (id, urlPath) => {
                 </div>
             
 
-                 <div className=" ml-3 lg:ml-15 mt-5 ">
+                 <div className=" ml-4 lg:ml-15 mt-5 ">
                 <p className="font-semibold text-gray-500">IN THE SPOTLIGHT</p>
                 <p className="text-2xl  font-semibold">Hottest brands on offer</p>
                 </div>
@@ -173,9 +173,9 @@ const handleImageClick = async (id, urlPath) => {
       <img
         src={card.img}
         alt={card.desc}
-        className="w-36 ml-2 h-45 lg:h-72 lg:w-[220px] lg:-ml-1"
+        className="w-36 ml-4 h-45 lg:h-72 lg:w-[220px] lg:-ml-1"
       />
-      <div className="mb-5 ml-2 lg:-ml-1">
+      <div className="mb-5 ml-4 lg:-ml-1">
         <p className="font-semibold">{card.title}</p>
         <p className="text-gray-600 w-[140px] truncate sm:w-auto sm:whitespace-normal">{card.desc}</p>
       </div>
