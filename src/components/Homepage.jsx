@@ -173,9 +173,9 @@ const handleImageClick = async (id, urlPath) => {
       <img
         src={card.img}
         alt={card.desc}
-        className="w-36 ml-3 h-45 lg:h-72 lg:w-[220px] lg:-ml-1"
+        className="w-36  h-45 lg:h-72 lg:w-[220px] lg:-ml-1"
       />
-      <div className="mb-5 ml-3 lg:-ml-1">
+      <div className="mb-5  lg:-ml-1">
         <p className="font-semibold">{card.title}</p>
         <p className="text-gray-600 w-[140px] truncate sm:w-auto sm:whitespace-normal">{card.desc}</p>
       </div>
