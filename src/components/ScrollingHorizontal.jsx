@@ -57,8 +57,8 @@ export default function HorizonatalCarousel({ handleImageClick }) {
         py: 2,
         overflowX: 'auto',
         px: 4,
-        marginLeft:{md:6,xs:-1},
-        marginRight:{md:6,xs:3},
+        marginLeft:{md:6,xs:-3},
+        marginRight:{md:6,xs:1},
         scrollSnapType: 'x mandatory',
         '& > *': {
           scrollSnapAlign: 'start',
