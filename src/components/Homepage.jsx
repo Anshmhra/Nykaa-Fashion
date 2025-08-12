@@ -145,7 +145,7 @@ const handleImageClick = async (id, urlPath) => {
                 </div>
             
 
-                 <div className="ml-15 mt-5">
+                 <div className=" ml-9 lg:ml-15 mt-5 ">
                 <p className="font-semibold text-gray-500">IN THE SPOTLIGHT</p>
                 <p className="text-2xl  font-semibold">Hottest brands on offer</p>
                 </div>
@@ -173,9 +173,9 @@ const handleImageClick = async (id, urlPath) => {
       <img
         src={card.img}
         alt={card.desc}
-        className="w-36 ml-16 h-45 lg:h-72 lg:w-[220px] lg:-ml-1"
+        className="w-36 ml-13 h-45 lg:h-72 lg:w-[220px] lg:-ml-1"
       />
-      <div className="mb-5 ml-16 lg:-ml-1">
+      <div className="mb-5 ml-13 lg:-ml-1">
         <p className="font-semibold">{card.title}</p>
         <p className="text-gray-600 w-[140px] truncate sm:w-auto sm:whitespace-normal">{card.desc}</p>
       </div>
