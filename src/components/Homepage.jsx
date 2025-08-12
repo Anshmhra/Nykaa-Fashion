@@ -72,7 +72,7 @@ const handleImageClick = async (id, urlPath) => {
 
 
     return(
-        <div>
+        <div className="ml-1 lg:ml-1">
             <div>
                 <div  onClick={()=>handleImageClick(74296,`/rendring?categoryId=74296`)}><img src="https://images-static.nykaa.com/uploads/e8e8c9be-714d-4464-83ca-3c40be53fe41.jpg?tr=w-1200,cm-pad_resize"
                 className="w-[1270px] ml-8 rounded-2xl mt-4 hover:cursor-pointer hover:scale-95 duration-300 sm:w-40 lg:w-320 "
