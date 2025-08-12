@@ -53,7 +53,7 @@ export default function HorizonatalCarousel({ handleImageClick }) {
     <Box
       sx={{
         display: 'flex',
-        gap: {md:2,xs:0},
+        gap: {md:2,xs:-4},
         py: 2,
         overflowX: 'auto',
         px: 4,
