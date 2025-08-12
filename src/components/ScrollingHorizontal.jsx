@@ -53,10 +53,10 @@ export default function HorizonatalCarousel({ handleImageClick }) {
     <Box
       sx={{
         display: 'flex',
-        gap: {md:2,xs:-4},
+        gap: {md:2,xs:0.5},
         py: 2,
         overflowX: 'auto',
-        px: 4,
+        px: {md:4,xs:1},
         marginLeft:{md:6,xs:-2},
         marginRight:{md:6,xs:1},
         scrollSnapType: 'x mandatory',
@@ -91,7 +91,7 @@ export default function HorizonatalCarousel({ handleImageClick }) {
 
             }}
           />
-          <Typography level="body-sm" sx={{ mt: 1, textAlign: 'center' }}>
+          <Typography level="body-sm" sx={{ mt: 1, textAlign: 'center' , fontSize: { xs: '0.75rem', md: '0.875rem' }}}>
             {item.title}
           </Typography>
         </Box>
