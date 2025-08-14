@@ -28,56 +28,79 @@ function Footer(){
              
 
             </div>
-            <div className="w-full h-100 bg-gray-500 text-white mt-12 m-0 mb-10 ">
+            <div className="w-full h-100  text-gray-700 mt-28 m-0 mb-10 ">
                 <ul className="ml-35 gap-3">
-                    <li className="mb-4 p-4 -ml-4 text-2xl">Nykaa</li>
-                    <li className="hover:text-pink-400 duration-110">Who are we?</li>
-                    <li className="hover:text-pink-400 duration-110">Careers</li>
-                    <li className="hover:text-pink-400 duration-110">Authenticity</li>
-                    <li className="hover:text-pink-400 duration-110">Press</li>
-                    <li className="hover:text-pink-400 duration-110">Testimonials</li>
-                    <li className="hover:text-pink-400 duration-110">Nykaa CSR</li>
-                    <li className="hover:text-pink-400 duration-110">Sustainability</li>
-                    <li className="hover:text-pink-400 duration-110">Responsible Disclosure</li>
-                    <li className="hover:text-pink-400 duration-110">Investor Relations</li>
-                    <li className="hover:text-pink-400 duration-110">Link to Smart ODR</li>
+                    <li className="mb-2 p-4 -ml-4 font-semibold">MEN</li>
+                    <Link to={"/rendring?categoryId=6824"}><li className="hover:text-pink-400 duration-110">Topwear</li></Link>
+                    <Link to={"/rendring?categoryId=6834"}><li className="hover:text-pink-400 duration-110">Bottomwear</li></Link>
+                    <Link to={"/rendring?categoryId=6841"}><li className="hover:text-pink-400 duration-110">Ethnicwear</li></Link>
+                    <Link to={"/rendring?categoryId=6857"}><li className="hover:text-pink-400 duration-110">Men's Footwear</li></Link>
+                    <Link to={"/rendring?categoryId=6879"}><li className="hover:text-pink-400 duration-110">Men's Accessories</li></Link>
+                    <Link to={"/rendring?categoryId=6850"}><li className="hover:text-pink-400 duration-110">Innerwear & Sleepwear</li></Link>
+                    <Link to={"/rendring?categoryId=6875"}><li className="hover:text-pink-400 duration-110">Men's Watches</li></Link>
+                    <Link to={"/rendring?categoryId=6867"}><li className="hover:text-pink-400 duration-110">Bags & Backpacks</li></Link>
+                    <Link to={"/rendring?categoryId=6888"}><li className="hover:text-pink-400 duration-110">Athleisure</li></Link>
+                    <Link to={"/rendring?categoryId=11219"}><li className="hover:text-pink-400 duration-110">Sports & Fitness</li></Link>
                 </ul>
-                <ul className="ml-89 -mt-73">
-                    <li className="mb-6">Help</li>
-                    <li className="hover:text-pink-400 duration-110">Contact Us</li>
-                    <li className="hover:text-pink-400 duration-110">Frequently asked questions</li>
-                    <li className="hover:text-pink-400 duration-110">Store Locator</li>
-                    <li className="hover:text-pink-400 duration-110">Cancellation & Return</li>
-                    <li className="hover:text-pink-400 duration-110">Shipping & Delivery</li>
-                    <li className="hover:text-pink-400 duration-110">Sell on Nykaa</li>
+                <ul className="ml-89 -mt-72 ">
+                    <li className="mb-6 font-semibold">WOMEN</li>
+                    <Link to={"/rendring?categoryId=4"}><li className="hover:text-pink-400 duration-110">Women's Indianwear</li></Link>
+                     <Link to={"/rendring?categoryId=3"}><li className="hover:text-pink-400 duration-110">Women's Westernwear</li></Link>
+                     <Link to={"/rendring?categoryId=89"}><li className="hover:text-pink-400 duration-110">Bags</li></Link>
+                     <Link to={"/rendring?categoryId=3528"}><li className="hover:text-pink-400 duration-110">Women's Footwear</li></Link>
+                     <Link to={"/rendring?categoryId=77"}><li className="hover:text-pink-400 duration-110">Women's Jewellery</li></Link>
+                     <Link to={"/rendring?categoryId=3946"}><li className="hover:text-pink-400 duration-110">Lingerie</li></Link>
+                     <Link to={"/rendring?categoryId=4015"}><li className="hover:text-pink-400 duration-110">Women's Sportswear</li></Link>
+                     <Link to={"/rendring?categoryId=3986"}><li className="hover:text-pink-400 duration-110">Women's Sleep & lounge</li></Link>
+                     <Link to={"/rendring?categoryId=4641"}><li className="hover:text-pink-400 duration-110">Women's Watches</li></Link>
+                     <Link to={"/rendring?categoryId=104"}><li className="hover:text-pink-400 duration-110">Fashion Accessories</li></Link>
                 </ul>
-                <ul className="ml-155 -mt-48">
-                    <li className="mb-5">Inspire Me</li>
-                    <li className="hover:text-pink-400 duration-110">Beauty Book</li>
-                    <li className="hover:text-pink-400 duration-110">Games Board</li>
-                    <li className="hover:text-pink-400 duration-110">Buying Guides</li>
+                <ul className="ml-155 -mt-71">
+                    <li className="mb-5 font-semibold">KIDS</li>
+                   <Link to={"/rendring?categoryId=6267"}><li className="hover:text-pink-400 duration-110">Kids Indianwear</li></Link>
+                    <Link to={"/rendring?categoryId=6282"}><li className="hover:text-pink-400 duration-110">Kids Westernwear</li></Link> 
+                     <Link to={"/rendring?categoryId=6333"}><li className="hover:text-pink-400 duration-110">Kids Footwear</li></Link>
+                      <Link to={"/rendring?categoryId=6348"}><li className="hover:text-pink-400 duration-110">Kids Jewellery</li></Link>
+                       
+                        <Link to={"/rendring?categoryId=6298"}><li className="hover:text-pink-400 duration-110">Kids Sportswear</li></Link>
+                         <Link to={"/rendring?categoryId=6372"}><li className="hover:text-pink-400 duration-110">Kids Sleepwear</li></Link>
+                          <Link to={"/rendring?categoryId=6343"}><li className="hover:text-pink-400 duration-110">Kids Accessories</li></Link> 
+                          <Link to={"/rendring?categoryId=6382"}><li className="hover:text-pink-400 duration-110">Toys & Games</li></Link>
+                            <Link to={"/rendring?categoryId=6329"}><li className="hover:text-pink-400 duration-110">Innerwear</li></Link>
+                    
                 </ul>
-                <ul className="ml-200 -mt-29">
-                    <li className="mb-4 ">Quick Links</li>
-                     <li className="hover:text-pink-400 duration-110">Offer Zone</li>
-                     <li className="hover:text-pink-400 duration-110">Offer Zone</li>
-                     <li className="hover:text-pink-400 duration-110">Nykaa Man</li>
-                     <li className="hover:text-pink-400 duration-110">Nykaa Fashion</li>
-                     <li className="hover:text-pink-400 duration-110">Nykaa Pro</li>
-                     <li className="hover:text-pink-400 duration-110">Sitemap</li>
+                <ul className="ml-200 -mt-65">
+                    <li className="mb-4 font-semibold">TOP BRANDS</li>
+                     <Link  to={"/rendring?categoryId=4886"}><li className="hover:text-pink-400 duration-110">Puma</li></Link>
+                      <Link  to={"/rendring?categoryId=4188"}><li className="hover:text-pink-400 duration-110">Vero Moda</li></Link>
+                       <Link  to={"/rendring?categoryId=4038"}><li className="hover:text-pink-400 duration-110">W</li></Link>
+                        <Link  to={"/rendring?categoryId=5274"}><li className="hover:text-pink-400 duration-110">Biba</li></Link>
+                         <Link  to={"/rendring?categoryId=4495"}><li className="hover:text-pink-400 duration-110">Forever New</li></Link>
+                          <Link  to={"/rendring?categoryId=6477"}><li className="hover:text-pink-400 duration-110">Skechers</li></Link> 
+                          <Link  to={"/rendring?categoryId=1970"}><li className="hover:text-pink-400 duration-110">Fablestreet</li></Link>
+                           <Link  to={"/rendring?categoryId=4189"}><li className="hover:text-pink-400 duration-110">Only</li></Link>
+                            <Link  to={"/rendring?categoryId=12071"}><li className="hover:text-pink-400 duration-110">Autumnlane</li></Link>
+                             <Link  to={"/rendring?categoryId=15204"}><li className="hover:text-pink-400 duration-110">Cider</li></Link> 
+                             <Link  to={"/rendring?categoryId=6748"}><li className="hover:text-pink-400 duration-110">Accessorize London</li></Link>
+                  
                  </ul>
-                  <ul className="ml-240 p-4 -mt-50">
-                     <li className="mb-4">Top Categories</li>
-                     <li className="hover:text-pink-400 duration-110">Makeup</li>
-                     <li className="hover:text-pink-400 duration-110">Skin</li>
-                     <li className="hover:text-pink-400 duration-110">Hair</li>
-                     <li className="hover:text-pink-400 duration-110">Bath & Body</li>
-                     <li className="hover:text-pink-400 duration-110">Appliances</li>
-                     <li className="hover:text-pink-400 duration-110">Mom and Baby</li>
-                     <li className="hover:text-pink-400 duration-110">Health & Wellness</li>
-                 <li className="hover:text-pink-400 duration-110">Fragrance</li>
-                     <li className="hover:text-pink-400 duration-110">Natural</li>
-                     <li className="hover:text-pink-400 duration-110">Luxe</li>
+                  <ul className="ml-240 p-4 -mt-80">
+                     <li className="mb-4 font-semibold">House OF Nykaa</li>
+                     <Link to={"/rendring?categoryId=4240"}><li className="hover:text-pink-400 duration-110">Twenty Dresses By Nykaa Fashion</li></Link>
+                     <Link to={"/rendring?categoryId=7059"}><li className="hover:text-pink-400 duration-110">Nykd by Nykaa</li></Link>
+                     <Link to={"/rendring?categoryId=4706"}><li className="hover:text-pink-400 duration-110">RSVP by Nykaa Fashion</li></Link>
+                     <Link to={"/rendring?categoryId=10009"}><li className="hover:text-pink-400 duration-110">Gajra Gang by Nykaa Fashion</li></Link>
+                    
+                     <Link to={"/rendring?categoryId=15963"}><li className="hover:text-pink-400 duration-110">Mixt by Nykaa Fashion</li></Link>
+                     <Link to={"/rendring?categoryId=11495"}><li className="hover:text-pink-400 duration-110">IYKYK</li></Link>
+                     <Link to={"/rendring?categoryId=4629"}><li className="hover:text-pink-400 duration-110">Kica</li></Link>
+                     <Link to={"/rendring?categoryId=3771"}><li className="hover:text-pink-400 duration-110">Pipa Bella By Nykaa Fashion</li></Link>
+                     <Link to={"/rendring?categoryId=13718"}><li className="hover:text-pink-400 duration-110">Azai by Nykaa Fashion</li></Link>
+                     <Link to={"/rendring?categoryId=12291"}><li className="hover:text-pink-400 duration-110">Twig & Twine</li></Link>
+                     <Link to={"/rendring?categoryId=13564"}><li className="hover:text-pink-400 duration-110">Gloot</li></Link>
+                     
+
+                   
                 </ul>
             
 
@@ -86,24 +109,12 @@ function Footer(){
                 
             </div>
           
-
+         
         </div>
     )
 }
 export default Footer;
 
-                // <ul className="ml-230 p-4">
-                //     <li className="mb-4">Top Categories</li>
-                //     <li>Makeup</li>
-                //     <li>Skin</li>
-                //     <li>Hair</li>
-                //     <li>Bath & Body</li>
-                //     <li>Appliances</li>
-                //     <li>Mom and Baby</li>
-                //     <li>Health & Wellness</li>
-                //     <li>Fragrance</li>
-                //     <li>Natural</li>
-                //     <li>Luxe</li>
-                // </ul>
+              
                  
              
