@@ -145,9 +145,9 @@ const handleImageClick = async (id, urlPath) => {
                 </div>
             
 
-                 <div className=" text-[18px] ml-4 lg:ml-15 mt-5 lg:text-[17px] ">
+                 <div className=" text-[14px] ml-4 lg:ml-15 mt-5 lg:text-[17px] ">
                 <p className="font-semibold text-gray-500">IN THE SPOTLIGHT</p>
-                <p className=" text-[20px] lg:text-2xl  font-semibold">Hottest brands on offer</p>
+                <p className=" text-[16px] lg:text-2xl  font-semibold">Hottest brands on offer</p>
                 </div>
 
               <div className="grid grid-cols-2 lg:grid-cols-5 gap-1 gap-x-1  lg:ml-[56px] mt-7 mr-2 lg:mr-8 relative z-0">
