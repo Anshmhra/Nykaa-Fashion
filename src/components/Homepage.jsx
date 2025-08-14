@@ -93,7 +93,7 @@ const handleImageClick = async (id, urlPath) => {
                
            
 
-            <div className="flex overflow-x-auto overflow-hidden scrollbar-hide mr-8 gap-6 ml-2 mt-6 pointer-events-auto lg:ml-[25px]"ref={containerRef}>
+            <div className="flex overflow-x-auto overflow-hidden scrollbar-hide mr-3 gap-6 ml-2 mt-6 pointer-events-auto lg:ml-[25px]"ref={containerRef}>
             <div className="ml-4 mt-8 flex-shrink-0 w-[348px] h-[200px] lg:w-[1248px] lg:h-[650px] lg:ml-[40px] hover:cursor-pointer  ">
              <div className="flex ">
             <div onClick={()=>handleImageClick(57205,`/rendring?categoryId=57205`)}><img src="https://images-static.nykaa.com/uploads/2c60c4f0-fd46-460a-a549-c68b0511da0d.jpg?tr=w-300,cm-pad_resize"
