@@ -93,8 +93,8 @@ const handleImageClick = async (id, urlPath) => {
                
            
 
-            <div className="flex overflow-x-auto overflow-hidden scrollbar-hide mr-20 ml-7 mt-6 pointer-events-auto lg:ml-[25px]"ref={containerRef}>
-            <div className="ml-1 mt-8 flex-shrink-0 w-[258px] h-[200px] lg:w-[1248px] lg:h-[650px] lg:ml-[40px] hover:cursor-pointer  ">
+            <div className="flex overflow-x-auto overflow-hidden scrollbar-hide mr-20 gap-5 ml-2 mt-6 pointer-events-auto lg:ml-[25px]"ref={containerRef}>
+            <div className="-ml-4 mt-8 flex-shrink-0 w-[330px] h-[200px] lg:w-[1248px] lg:h-[650px] lg:ml-[40px] hover:cursor-pointer  ">
              <div className="flex ">
             <div onClick={()=>handleImageClick(57205,`/rendring?categoryId=57205`)}><img src="https://images-static.nykaa.com/uploads/2c60c4f0-fd46-460a-a549-c68b0511da0d.jpg?tr=w-300,cm-pad_resize"
             className=" "
@@ -118,7 +118,7 @@ const handleImageClick = async (id, urlPath) => {
             </div>
             </div>
 
-            <div className="ml-8 mt-8 flex-shrink-0 w-[258px] h-[200px] lg:w-[1248px] lg:h-[650px] lg:ml-[18px] overflow-x-auto scrollbar-hide -mr-50  hover:cursor-pointer ">
+            <div className="ml-8 mt-8 flex-shrink-0 w-[330px] h-[200px] lg:w-[1248px] lg:h-[650px] lg:ml-[18px] overflow-x-auto scrollbar-hide -mr-50  hover:cursor-pointer ">
             <div className="flex ">
                 <div onClick={()=>handleImageClick(7266,`/rendring?categoryId=7266`)} ><img src="https://images-static.nykaa.com/uploads/93ad2e6f-449b-46ee-a412-03bd46ba46cf.jpg?tr=w-300,cm-pad_resize"
                 /></div>
