@@ -77,9 +77,9 @@ const handleImageClick = async (id, urlPath) => {
                 <div  onClick={()=>handleImageClick(74296,`/rendring?categoryId=74296`)}><img src="https://images-static.nykaa.com/uploads/e8e8c9be-714d-4464-83ca-3c40be53fe41.jpg?tr=w-1200,cm-pad_resize"
                 className="w-[358px] h-[93px] ml-3 rounded-2xl mt-4 hover:cursor-pointer hover:scale-95 duration-300  lg:w-320 lg:ml-8 lg:h-63"
                 /></div>
-                <div className="ml-2 mt-6 lg:ml-15">
-                <p className="text-[18px] font-semibold text-gray-500">Our Stores</p>
-                <p className="text-[20px] font-semibold">Find everything for your every need</p>
+                <div className="ml-2 mt-6 lg:ml-15 ">
+                <p className="text-[14px] lg:text-[20px] font-semibold text-gray-500">Our Stores</p>
+                <p className="text-[16px] lg:text-[22px] font-semibold">Find everything for your every need</p>
                 </div>
 
             
@@ -93,8 +93,8 @@ const handleImageClick = async (id, urlPath) => {
                
            
 
-            <div className="flex overflow-x-auto overflow-hidden scrollbar-hide mr-20 ml-15 mt-6 pointer-events-auto "ref={containerRef}>
-            <div className="ml-1 mt-8 flex-shrink-0 w-[1248px] hover:cursor-pointer  ">
+            <div className="flex overflow-x-auto overflow-hidden scrollbar-hide mr-20 ml-7 mt-6 pointer-events-auto lg:ml-[25px]"ref={containerRef}>
+            <div className="ml-1 mt-8 flex-shrink-0 w-[258px] h-[200px] lg:w-[1248px] lg:h-[650px] lg:ml-[40px] hover:cursor-pointer  ">
              <div className="flex ">
             <div onClick={()=>handleImageClick(57205,`/rendring?categoryId=57205`)}><img src="https://images-static.nykaa.com/uploads/2c60c4f0-fd46-460a-a549-c68b0511da0d.jpg?tr=w-300,cm-pad_resize"
             className=" "
@@ -118,7 +118,7 @@ const handleImageClick = async (id, urlPath) => {
             </div>
             </div>
 
-            <div className=" mt-8 flex-shrink-0 w-full overflow-x-auto scrollbar-hide -mr-50  hover:cursor-pointer ">
+            <div className="ml-8 mt-8 flex-shrink-0 w-[258px] h-[200px] lg:w-[1248px] lg:h-[650px] lg:ml-[18px] overflow-x-auto scrollbar-hide -mr-50  hover:cursor-pointer ">
             <div className="flex ">
                 <div onClick={()=>handleImageClick(7266,`/rendring?categoryId=7266`)} ><img src="https://images-static.nykaa.com/uploads/93ad2e6f-449b-46ee-a412-03bd46ba46cf.jpg?tr=w-300,cm-pad_resize"
                 /></div>
@@ -145,9 +145,9 @@ const handleImageClick = async (id, urlPath) => {
                 </div>
             
 
-                 <div className=" text-[10px] ml-4 lg:ml-15 mt-5 lg:text-[17px] ">
+                 <div className=" text-[17px] ml-4 lg:ml-15 mt-5 lg:text-[17px] ">
                 <p className="font-semibold text-gray-500">IN THE SPOTLIGHT</p>
-                <p className=" text-[15px] lg:text-2xl  font-semibold">Hottest brands on offer</p>
+                <p className=" text-[19px] lg:text-2xl  font-semibold">Hottest brands on offer</p>
                 </div>
 
               <div className="grid grid-cols-2 lg:grid-cols-5 gap-1 gap-x-1  lg:ml-[56px] mt-7 mr-2 lg:mr-8 relative z-0">
@@ -167,7 +167,7 @@ const handleImageClick = async (id, urlPath) => {
     <div
       key={card.id}
       onClick={() => handleImageClick(card.id, `/rendring?categoryId=${card.id}`)}
-      className="relative z-[9999] pointer-events-auto cursor-pointer inline-block"
+      className="ml-1 relative z-[9999] pointer-events-auto cursor-pointer inline-block"
       style={{ pointerEvents: "auto" }}
     >
       <img
