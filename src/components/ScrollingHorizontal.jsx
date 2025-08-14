@@ -53,12 +53,12 @@ export default function HorizonatalCarousel({ handleImageClick }) {
     <Box
       sx={{
         display: 'flex',
-        gap: {md:2,xs:0.5},
+        gap: { md: 2, xs: 0.5 },
         py: 2,
         overflowX: 'auto',
-        px: {md:4,xs:1},
-        marginLeft:{md:6,xs:1},
-        marginRight:{md:6,xs:1},
+        px: { md: 4, xs: 1 },
+        marginLeft: { md: 6, xs: 1 },
+        marginRight: { md: 6, xs: 1 },
         scrollSnapType: 'x mandatory',
         '& > *': {
           scrollSnapAlign: 'start',
@@ -69,14 +69,17 @@ export default function HorizonatalCarousel({ handleImageClick }) {
       {data.map((item, index) => (
         <Box
           key={index}
-          onClick={() => handleImageClick(item.id, `/rendring?categoryId=${item.id}`)}
+          onClick={() =>
+            handleImageClick(item.id, `/rendring?categoryId=${item.id}`)
+          }
           sx={{
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
             cursor: 'pointer',
-            minWidth: { md: 145, xs: 77 }, 
-          
+            minWidth: { md: 145, xs: 77 },
+            touchAction: 'manipulation', // ✅ mobile tap delay fix
+            WebkitTapHighlightColor: 'transparent', // ✅ removes grey tap overlay in mobile
           }}
         >
           <Box
@@ -84,14 +87,24 @@ export default function HorizonatalCarousel({ handleImageClick }) {
             src={item.src}
             alt={item.title}
             sx={{
-              width: {md:120,xs:70} ,     
-              height: {md:120,xs:70},
+              width: { md: 120, xs: 70 },
+              height: { md: 120, xs: 70 },
               borderRadius: '50%',
               objectFit: 'cover',
-
+              pointerEvents: 'auto', // ✅ ensures image can receive touch events
+              userSelect: 'none', // ✅ prevents accidental text/image selection
+              transition: 'transform 0.3s ease',
+              '&:active': { transform: 'scale(0.95)' } // ✅ click feedback
             }}
           />
-          <Typography level="body-sm" sx={{ mt: 1, textAlign: 'center' , fontSize: { xs: '0.75rem', md: '0.875rem' }}}>
+          <Typography
+            level="body-sm"
+            sx={{
+              mt: 1,
+              textAlign: 'center',
+              fontSize: { xs: '0.75rem', md: '0.875rem' }
+            }}
+          >
             {item.title}
           </Typography>
         </Box>
