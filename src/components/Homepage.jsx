@@ -8,46 +8,38 @@ function HomePage(){
      const navigate = useNavigate();
   const { addProductsToCache,setSyrax } = useProductCache();
 
-const handleImageClick = async (id, urlPath) => {
+// Homepage.jsx
+
+const handleImageClick = async (brandId, route) => {
   try {
-    let isBrand = urlPath.includes("brandId");
+    // Agar cache me data nahi hai to hi fetch karo
+    if (!cachedBrands[brandId]) {
+      const res = await fetch(
+        `https://www.nykaa.com/gateway-api/brands/products?brandId=${brandId}`
+      );
 
-    let url = isBrand
-      ? `https://www.nykaafashion.com/rest/appapi/v2/brands/products?brandId=${id}&PageSize=36&sort=popularity&currentPage=1&filter_format=v2&currency=INR&country_code=IN&apiVersion=5&deviceType=MSITE&device_os=mweb_windows`
-      : `https://www.nykaafashion.com/rest/appapi/V2/categories/products?categoryId=${id}&PageSize=36&sort=popularity&currentPage=1&filter_format=v2&currency=INR&country_code=IN&apiVersion=5&deviceType=MSITE&device_os=mweb_windows`;
+      if (!res.ok) {
+        throw new Error(`Failed to fetch brand products: ${res.status}`);
+      }
 
-   
+      const data = await res.json();
 
-    const response = await fetch(url);
- 
+      // Cache update
+      addBrandsToCache(brandId, data.products);
 
-    const data = await response.json();
-
-
-    const products = data.response?.products || data.products || [];
-    const seoInfo = data.response?.seo_info || data.seo_info;
-
-    console.log("Products:", products);
-
-
-    if (!Array.isArray(products)) {
-      throw new Error("Products is not an array");
+      // SEO info update
+      if (data.seo_info) {
+        setSyrax(data.seo_info);
+      }
     }
-
-   
-    try {
-      addProductsToCache(id, products);
-      if (seoInfo) setSyrax(seoInfo);
-    } catch (innerErr) {
-      console.error("Error in context functions:", innerErr);
-      throw innerErr; 
-    }
-
-    navigate(urlPath);
-  } catch (err) {
-    console.error("Error caught in handleImageClick:", err);
+  } catch (error) {
+    console.error("Error fetching brand products:", error);
+  } finally {
+    // Data fetch ho ya na ho, navigate hamesha karega
+    navigate(route);
   }
 };
+
 
 
 
