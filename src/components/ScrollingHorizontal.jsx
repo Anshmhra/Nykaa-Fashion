@@ -1,5 +1,6 @@
 import { Box, Typography } from "@mui/joy";
 import { useNavigate } from "react-router-dom";
+import { useProductCache } from "../Context/SearchContext";
 
 const data = [
   {
@@ -51,9 +52,24 @@ const data = [
 
 export default function HorizonatalCarousel() {
   const navigate = useNavigate();
+  const { addProductsToCache, setCategoryHeader } = useProductCache();
 
-  const handleClick = (id) => {
-    navigate(`/rendring?categoryId=${id}`);
+  const handleClick = async (id) => {
+    try {
+      const URL = `https://www.nykaafashion.com/rest/appapi/V2/categories/products?PageSize=36&filter_format=v2&apiVersion=5&currency=INR&country_code=IN&deviceType=WEBSITE&sort=popularity&device_os=desktop&categoryId=${id}&currentPage=1&sort_algo=default`;
+      const res = await fetch(URL);
+      const data = await res.json();
+
+      const products = data?.response?.products || [];
+      const meta = data?.response?.meta_data || {};
+
+      addProductsToCache(id, products);
+      setCategoryHeader(meta);
+
+      navigate(`/rendring?categoryId=${id}`);
+    } catch (err) {
+      console.error("Category fetch failed:", err);
+    }
   };
 
   return (
@@ -83,6 +99,8 @@ export default function HorizonatalCarousel() {
             alignItems: "center",
             cursor: "pointer",
             minWidth: { md: 145, xs: 77 },
+            userSelect: "none", // accidental text selection avoid
+            touchAction: "manipulation", // mobile click better
           }}
         >
           <Box
