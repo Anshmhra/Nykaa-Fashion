@@ -9,24 +9,15 @@ function Rendring() {
   const [searchParams] = useSearchParams();
   const categoryId = searchParams.get("categoryId");
 
-  // UseCards me loading state bhi return karega
-  const [Call, categorySyrax, loading] = UseCards(categoryId);
-
+  const [Call] = UseCards(categoryId);
+  const { categorySyrax } = useProductCache();
   const { wishItems, addToWishList, removeFromWishlist } = useWishlist();
   const navigate = useNavigate();
 
-  if (loading) {
+  if (!categoryId || Call.length === 0) {
     return (
       <div className="text-center mt-10 text-gray-500 text-lg">
         Loading category...
-      </div>
-    );
-  }
-
-  if (!Call.length) {
-    return (
-      <div className="text-center mt-10 text-gray-500 text-lg">
-        No products found.
       </div>
     );
   }
@@ -48,26 +39,22 @@ function Rendring() {
           item?.imageUrl ? (
             <div
               key={id}
-              onClick={() =>
-                navigate("/product", { state: { itemData: item } })
-              }
+              onClick={() => navigate("/product", { state: { itemData: item } })}
               className="w-[230px] rounded-2xl hover:shadow-2xl overflow-hidden hover:cursor-pointer hover:scale-95 duration-300 relative"
             >
-              {/* Product Image */}
               <img
                 src={item.imageUrl}
                 alt={item.title}
                 className="w-full h-[320px] object-cover rounded"
               />
 
-              {/* New Badge */}
               {item.badge_new?.title && (
                 <div className="absolute bg-black text-white text-xs px-2 py-1  -mt-8 ml-2 rounded">
                   {item.badge_new.title}
                 </div>
               )}
 
-              {/* Wishlist Button */}
+            
               <div
                 onClick={(e) => {
                   e.stopPropagation();
@@ -85,7 +72,7 @@ function Rendring() {
                 )}
               </div>
 
-              {/* Tags */}
+          
               <div className="flex gap-1 text-[13px] mt-2 ml-1">
                 {item?.tag?.slice(0, 2).map((tagObj, i) => (
                   <div
@@ -97,13 +84,13 @@ function Rendring() {
                 ))}
               </div>
 
-              {/* Title & Subtitle */}
+             
               <p className="text-[15px] font-semibold mt-2 ml-1">{item.title}</p>
               <p className="text-[14px] text-gray-500 truncate max-w-[220px] ml-1">
                 {item.subTitle}
               </p>
 
-              {/* Color Variants */}
+            
               {item?.sibling_colour_codes?.length > 0 && (
                 <div className="flex gap-1 mt-2 items-center ml-1">
                   {item.sibling_colour_codes.slice(0, 4).map((color, colorIdx) => (
@@ -121,7 +108,7 @@ function Rendring() {
                 </div>
               )}
 
-              {/* Price */}
+            
               <div className="flex gap-2 mt-2 items-center ml-1">
                 <MdCurrencyRupee className="text-gray-700" />
                 <p className="-ml-2 text-gray-800">{item.discountedPrice}</p>
@@ -132,7 +119,7 @@ function Rendring() {
                 <p className="text-emerald-600 text-[14px]">{item.discount}%</p>
               </div>
 
-              {/* Dynamic Text */}
+           
               {item.dynamic_text?.title && (
                 <p className="text-[14px] text-emerald-600 ml-2">
                   {item.dynamic_text.title}
