@@ -187,11 +187,7 @@ const handleImageClick = async (id, urlPath) => {
                    
                    
 
-                    <div>
-                        <img src="https://images-static.nykaa.com/uploads/e1fa220b-4754-494b-92a2-9c91b55cccdb.jpg?tr=w-1200,cm-pad_resize"
-                         className="w-[1130px] ml-15 mt-10 hover:cursor-pointer m"
-                        />
-                    </div>
+                    
 
            
             </div>

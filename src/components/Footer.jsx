@@ -5,30 +5,30 @@ import { FaGithub } from "react-icons/fa";
 import { Link } from "react-router-dom";
 function Footer(){
     return(
-        <div className="w-full h-60 bg-neutral-700 mt-4 text-white  ">
+        <div className="w-full h-45 bg-neutral-700 mt-4 text-white  ">
             <div >
 
                    <div className="text-white ml-25 p-12 ">
                     <p>Get special discount on your inbox</p>
-                    <div className="flex gap-18">
-                    <p>Your Email</p>
-                  <button className="border p-1 w-19 h-12 ">Send</button></div>
+                    <div className="flex gap-3">
+                   <input type="text" placeholder="Your E-mail"/>
+                  <button className="border p-1 w-19 h-12 bg-gray-800 hover:cursor-pointer hover:scale-95 duration-300 rounded">Send</button></div>
                  
                 </div>
-                    <p className="ml-35 -mt-15">_________________________</p>
-                <div className="ml-190 -mt-20">
+                    
+                <div className="ml-220 -mt-26">
                 <p className="text=[24px]">FOR ANY HELP, YOU MAY Connect WITH ME</p>
                   <Link to={"https://www.instagram.com/ansh_mehra19/"}><FaInstagram className="mt-2 ml-5"/></Link>
                   <Link to={"https://www.linkedin.com/in/ansh-mehra-2916312b1/"}><FaLinkedin  className="ml-12 -mt-4"/></Link>
                   <Link to={"https://github.com/Anshmhra"}><FaGithub className="ml-19 -mt-4"/></Link>
 
-                <p className="mt-4">Monday to Saturday, 8AM to 10PM and Sunday, 10AM to 7PM</p>
+                
                 </div>
 
              
 
             </div>
-            <div className="w-full h-100  text-gray-700 mt-28 m-0 mb-10 ">
+            <div className="w-full h-100  text-gray-700 mt-18 m-0 mb-10 ">
                 <ul className="ml-35 gap-3">
                     <li className="mb-2 p-4 -ml-4 font-semibold">MEN</li>
                     <Link to={"/rendring?categoryId=6824"}><li className="hover:text-pink-400 duration-110">Topwear</li></Link>
@@ -102,9 +102,11 @@ function Footer(){
 
                    
                 </ul>
-            
+              <p className="ml-145 mt-5">© 2025. All Rights Reserved</p>
 
             </div>
+
+          
             <div>
                 
             </div>
